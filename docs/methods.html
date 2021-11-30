@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Methods | A statistical Analysis of Aviation Wildlife Mishaps</title>
+  <meta name="description" content="Chapter 2 Methods | A statistical Analysis of Aviation Wildlife Mishaps" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Methods | A statistical Analysis of Aviation Wildlife Mishaps" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Methods | A statistical Analysis of Aviation Wildlife Mishaps" />
+  
+  
+  
+
+<meta name="author" content="Tiffany Waller" />
+
+
+<meta name="date" content="2021-11-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction.html"/>
+<link rel="next" href="analysis-of-the-current-data.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Wildlife Analysis</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section"></a></li>
+<li class="chapter" data-level="" data-path="approval-page.html"><a href="approval-page.html"><i class="fa fa-check"></i>Approval Page</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#statement-of-problem"><i class="fa fa-check"></i><b>1.1</b> Statement of Problem</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#relevance-of-problem"><i class="fa fa-check"></i><b>1.2</b> Relevance of Problem</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#literature-review"><i class="fa fa-check"></i><b>1.3</b> Literature Review</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#previous-research"><i class="fa fa-check"></i><b>1.3.1</b> Previous Research</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>2</b> Methods</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="methods.html"><a href="methods.html#data"><i class="fa fa-check"></i><b>2.1</b> Data</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="methods.html"><a href="methods.html#variables"><i class="fa fa-check"></i><b>2.1.1</b> Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="methods.html"><a href="methods.html#statistical-methods"><i class="fa fa-check"></i><b>2.2</b> Statistical Methods</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="methods.html"><a href="methods.html#linear-regression"><i class="fa fa-check"></i><b>2.2.1</b> Linear Regression</a></li>
+<li class="chapter" data-level="2.2.2" data-path="methods.html"><a href="methods.html#logistic-regression"><i class="fa fa-check"></i><b>2.2.2</b> Logistic Regression</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="analysis-of-the-current-data.html"><a href="analysis-of-the-current-data.html"><i class="fa fa-check"></i><b>3</b> Analysis of the Current Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="analysis-of-the-current-data.html"><a href="analysis-of-the-current-data.html#analysis-results"><i class="fa fa-check"></i><b>3.1</b> Analysis Results</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>4</b> Conclusions</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="conclusions.html"><a href="conclusions.html#summary-interpretation"><i class="fa fa-check"></i><b>4.1</b> Summary: Interpretation</a></li>
+<li class="chapter" data-level="4.2" data-path="conclusions.html"><a href="conclusions.html#limitations"><i class="fa fa-check"></i><b>4.2</b> Limitations</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A statistical Analysis of Aviation Wildlife Mishaps</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="methods" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Methods</h1>
+<div id="data" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Data</h2>
+<div class="line-block">         The wildlife strike data in this project comes directly from the Federal Aviation Administration, where data is contributed in real-time when a strike occurs. Data becomes available when a bird strike is reported to the FAA by an airline or some other aviation industry. The airline or other pilots are required to report this data only when a strike occurs. Thus, there is not data available for every single flight, only those that have experienced a wildlife strike. While there is data available from 1990 to this very day, this project only uses the data through the end of 2020. Additionally, this project concentrates specifically on bird strikes. [2]</div>
+<div id="variables" class="section level3" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Variables</h3>
+<div id="predictor-variables" class="section level4" number="2.1.1.1">
+<h4><span class="header-section-number">2.1.1.1</span> Predictor Variables</h4>
+<ul>
+<li>Sky: Type of cloud cover
+<ul>
+<li>No Cloud</li>
+<li>Overcast</li>
+<li>Some Clouds</li>
+</ul></li>
+<li>Time of Day: Light conditions
+<ul>
+<li>Dawn</li>
+<li>Day</li>
+<li>Dusk</li>
+<li>Night</li>
+</ul></li>
+<li>Size: Size of bird as reported by the pilot
+<ul>
+<li>Small</li>
+<li>Medium</li>
+<li>Large</li>
+</ul></li>
+<li>Warned: Pilot warned of birds/wildlife
+<ul>
+<li>Yes</li>
+<li>No</li>
+</ul></li>
+<li>Ingested: Aircraft engine ingested the bird
+<ul>
+<li>Yes</li>
+<li>No</li>
+</ul></li>
+</ul>
+</div>
+<div id="outcome-variables" class="section level4" number="2.1.1.2">
+<h4><span class="header-section-number">2.1.1.2</span> Outcome Variables</h4>
+<ul>
+<li><p>Number of Injuries: Number of people injured</p></li>
+<li><p>Indicated Damage: Indicates whether or not aircraft was damaged</p>
+<ul>
+<li>Yes</li>
+<li>No</li>
+</ul></li>
+<li><p>Damage</p>
+<ul>
+<li><p>None: No damage was reported</p></li>
+<li><p>Minor: When the aircraft can be rendered airworthy by simple repairs or replacements and an extensive inspection is not necessary</p></li>
+<li><p>Substantial: When the aircraft incurs damage or structural failure which adversely affects the structure, strength, performance or flight characteristics of the aircraft and which would normally require major repair or replacement of the affected component</p></li>
+<li><p>Destroyed: When the damage sustained makes it inadvisable to restore the aircraft to an airworthy condition.</p></li>
+<li><p>Uncertain: The aircraft was damaged, but details as to the extent of the damage are lacking</p></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="statistical-methods" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Statistical Methods</h2>
+<div id="linear-regression" class="section level3" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Linear Regression</h3>
+<p>Ordinary linear regression is a method commonly used to estimate a statistical relationship between two or more variables by constructing a surface that approximates their relationship.</p>
+<p><em>Model</em></p>
+<ul>
+<li>The linear model obtained is of the form:</li>
+</ul>
+<p><span class="math display">\[ Y = \beta_0 + \beta_1 X_1 + \cdots + \beta_k X_k \]</span></p>
+<ul>
+<li><p><span class="math inline">\(Y\)</span> is the continuous outcome</p></li>
+<li><p><span class="math inline">\(X_i\)</span> is the <span class="math inline">\(i^{\text{th}}\)</span> predictor; <span class="math inline">\(i = 1, \cdots, k\)</span>, where <span class="math inline">\(k\)</span> is the number of predictors in the model</p></li>
+<li><p><span class="math inline">\(\beta_i\)</span> is the slope for predictor <span class="math inline">\(i\)</span></p></li>
+<li><p><span class="math inline">\(\beta_0\)</span> is the <span class="math inline">\(Y\)</span>-intercept</p></li>
+</ul>
+<p><em>Assumptions of the Model</em></p>
+<ol style="list-style-type: decimal">
+<li><p>Homoscedasticity: the residual has constant variance for any value of <span class="math inline">\(X\)</span></p></li>
+<li><p>Independence: observations are independent from one another</p></li>
+<li><p>Linearity: there exists a linear relationship between the two variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></p></li>
+<li><p>Normality: the residuals are normally distributed</p></li>
+</ol>
+<p><em>Interpretation</em></p>
+<ul>
+<li><p>We interpret <span class="math inline">\(\hat{\beta}_i\)</span> for continuous predictors as follows: for a one unit increase in <span class="math inline">\(X_i\)</span>, <span class="math inline">\(Y\)</span> increases or decreases by <span class="math inline">\(|\hat{\beta}_i|\)</span>. There is an increase if <span class="math inline">\(\hat{\beta}_i &gt; 0\)</span> and a decrease if <span class="math inline">\(\hat{\beta}_i &lt; 0\)</span>.</p></li>
+<li><p>We interpret <span class="math inline">\(\hat{\beta}_i\)</span> for categorical predictors as follows: the average difference between the group of interest and the reference group is <span class="math inline">\(\hat{\beta}\)</span>.</p></li>
+</ul>
+<p><em>Inference</em></p>
+<ul>
+<li><p>A hypotheses test is used to draw conclusions on the basis of statistical testing (<span class="math inline">\(t\)</span> test):</p>
+<ul>
+<li><p><span class="math inline">\(H_0: \ \beta_i = 0\)</span></p></li>
+<li><p><span class="math inline">\(H_1: \ \beta_i \ne 0\)</span></p></li>
+</ul></li>
+<li><p>The test statistic is defined by the following equation: <span class="math display">\[ t_0 = \frac{\hat{\beta}_i}{\text{SE}_{\hat{\beta}_i}} \]</span></p>
+<ul>
+<li><p><span class="math inline">\(\hat\beta_i\)</span> is the slope of the sample regression line</p></li>
+<li><p><span class="math inline">\(SE_{\hat\beta_i}\)</span> is the standard error of the slope</p></li>
+</ul></li>
+<li><p>We can construct confidence intervals as follows:</p></li>
+</ul>
+<p><span class="math display">\[ \hat{\beta}_i \pm t_{\alpha/2, n-k-1} \text{SE}_{\hat{\beta}_i} \]</span></p>
+</div>
+<div id="logistic-regression" class="section level3" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Logistic Regression</h3>
+<p>When outcomes are not continuous, linear regression is not appropriate. In the case of categorical outcomes, logistic regression should be used. Logistic regression models the log-odds of a categorical response. The type of categorical outcome (binomial, multinomial, or ordinal) will dictate the type of logistic regression used.</p>
+<div id="binary-logistic-regression" class="section level4" number="2.2.2.1">
+<h4><span class="header-section-number">2.2.2.1</span> Binary Logistic Regression</h4>
+<p>Binary logistic regression is appropriate for categorical outcomes with only two possible responses. Often this is yes or no data (e.g., an event happening), but it does not have to be.</p>
+<p><em>Model</em></p>
+<ul>
+<li>The binary logistic regression model is as follows:</li>
+</ul>
+<p><span class="math display">\[ \ln \left( \frac{\pi}{1-\pi} \right) = \beta_0 + \beta_1 X_1 + \cdots + \beta_k X_k \]</span></p>
+<ul>
+<li><p><span class="math inline">\(\pi=P[Y=1]\)</span> = the probability of the outcome</p></li>
+<li><p><span class="math inline">\(X_i\)</span> is the <span class="math inline">\(i^{\text{th}}\)</span> predictor; <span class="math inline">\(i = 1, \cdots, k\)</span>, where <span class="math inline">\(k\)</span> is the number of predictors in the model</p></li>
+<li><p><span class="math inline">\(\beta_i\)</span> is the slope for predictor <span class="math inline">\(i\)</span></p></li>
+<li><p><span class="math inline">\(\beta_0\)</span> is the <span class="math inline">\(Y\)</span>-intercept</p></li>
+</ul>
+<p><em>Assumptions of the Model</em></p>
+<ol style="list-style-type: decimal">
+<li><p>Binary outcome: the response variable is binary</p></li>
+<li><p>Independence: observations are independent from one another</p></li>
+<li><p>Linearity: there exists a linear relationship between <span class="math inline">\(X\)</span> and the log-odds</p></li>
+</ol>
+<p><em>Interpretation</em></p>
+<ul>
+<li><p>The odds ratio is found by exponentiating the slope:
+<span class="math display">\[ \hat{\text{OR}}_i = e^{\hat{\beta}_i} \]</span></p></li>
+<li><p>We can then interpret the odds ratio as follows: for a 1 [unit] increase in <span class="math inline">\(X_i\)</span>, we expect the odds of outcome to be multiplied by the odds ratio [<span class="math inline">\(e^{\hat{\beta}_i}\)</span>].</p></li>
+</ul>
+<p><em>Inference</em></p>
+<ul>
+<li>Hypotheses testing can then be accomplished for the odds ratio:</li>
+</ul>
+<p><span class="math display">\[ H_0:{\text{OR}}_i = {\text{OR}}_i^{(0)} | OR_i≥ {\text{OR}}_i^{(0)}|OR_i≤{\text{OR}}_i^{(0)} \]</span></p>
+<p><span class="math display">\[ H_1:{\text{OR}}_i = {\text{OR}}_i^{(0)} | OR_i≥ {\text{OR}}_i^{(0)}|OR_i≤{\text{OR}}_i^{(0)} \]</span></p>
+<ul>
+<li><p>The test statistic is defined by the following equation: <span class="math display">\[ z_0 = \frac{ \hat{\beta}_i-\text{ln}{\text{(OR)}_i^{(0)}}}{\text{SE}_{\hat{\beta}_i}} \]</span></p>
+<ul>
+<li><p><span class="math inline">\(\hat\beta_i\)</span> is the slope of the sample regression line</p></li>
+<li><p><span class="math inline">\(\text{SE}_{\hat\beta_i}\)</span> is the standard error of the slope</p></li>
+</ul></li>
+<li><p>We can construct confidence intervals as follows:</p></li>
+</ul>
+<p><span class="math display">\[ \hat{\beta}_i \pm Z_{1-\alpha/2} \text{SE}_{\hat{\beta}_i} \]</span></p>
+</div>
+<div id="ordinal-logistic-regression-model" class="section level4" number="2.2.2.2">
+<h4><span class="header-section-number">2.2.2.2</span> Ordinal Logistic Regression Model</h4>
+<p>Ordinal logistic regression is appropriate for categorical outcomes with ordinal responses; responses are not required to be binary as in binary logistic regression.</p>
+<p><em>Model</em></p>
+<ul>
+<li>The ordinal logistic regression model is as follows:</li>
+</ul>
+<p><span class="math display">\[ \text{logit}(P[Y\le j])=\text{ln}\left(\frac{\pi_1 + \cdots + \pi_j}{{\pi_{j+1}} + \cdots + {\pi_c}}\right) = \hat\beta_{0j} + \hat\beta_{1}X_1 + \cdots + \hat\beta_{k}X_k  \]</span></p>
+<ul>
+<li><p><span class="math inline">\(\text{logit}(P[Y\le j])\)</span> is the probability that our outcome is in category <span class="math inline">\(j\)</span> or one below it</p></li>
+<li><p><span class="math inline">\(Y\)</span> is an ordinal outcome</p></li>
+<li><p><span class="math inline">\(X_i\)</span> is the <span class="math inline">\(i^{\text{th}}\)</span> predictor; <span class="math inline">\(i = 1, \dots, k\)</span>, where <span class="math inline">\(k\)</span> is the number of predictors in the model</p></li>
+<li><p><span class="math inline">\(\beta_i\)</span> is the slope for predictor <span class="math inline">\(i\)</span></p></li>
+<li><p><span class="math inline">\(\beta_{0j}\)</span> is the <span class="math inline">\(Y\)</span>-intercept for the model comparing <span class="math inline">\(Y \le j\)</span> to <span class="math inline">\(Y &gt; j\)</span></p></li>
+</ul>
+<p><em>Assumptions of the Model</em></p>
+<ol style="list-style-type: decimal">
+<li><p>Ordinal response: the response variable is ordinal</p></li>
+<li><p>Independence: observations are independent of one another</p></li>
+<li><p>Linearity: there exists a linear relationship between <span class="math inline">\(X\)</span> and the cumulative logit</p></li>
+<li><p>Proportional odds: for all predictors in the model, the odds ratios will be the same, regardless of any two outcomes selected for comparison</p></li>
+</ol>
+<p><em>Interpretation</em></p>
+<p>Odds ratios are interpreted slightly different than what we saw in binary logistic regression due to the model being cumulative. Odds ratios can be found by exponentiating the coefficients.</p>
+<ul>
+<li><p>The odds ratio is found by exponentiating the slope:
+<span class="math display">\[ \hat{\text{OR}}_i = e^{\hat{\beta}_i} \]</span></p></li>
+<li><p>We can then interpret the odds ratio as follows: for a 1 [unit] increase in <span class="math inline">\(x\)</span>, the odds in favor of the response category <span class="math inline">\(j\)</span> or lower are multiplied by the odds ratio [<span class="math inline">\(e^{\hat{\beta}_i}\)</span>].</p></li>
+</ul>
+<p><em>Inference</em></p>
+<ul>
+<li>Hypotheses testing can then be accomplished for the odds ratio:</li>
+</ul>
+<p><span class="math display">\[ H_0:{\text{OR}}_i = {\text{OR}}_i^{(0)} | OR_i≥ {\text{OR}}_i^{(0)}|OR_i≤{\text{OR}}_i^{(0)} \]</span></p>
+<p><span class="math display">\[ H_1:{\text{OR}}_i = {\text{OR}}_i^{(0)} | OR_i≥ {\text{OR}}_i^{(0)}|OR_i≤{\text{OR}}_i^{(0)} \]</span></p>
+<ul>
+<li><p>The test statistic is defined by the following equation: <span class="math display">\[ z_0 = \frac{ \hat{\beta}_i-\text{ln}{\text{(OR)}_i^{(0)}}}{\text{SE}_{\hat{\beta}_i}} \]</span></p>
+<ul>
+<li><p><span class="math inline">\(\hat\beta_i\)</span> is the slope of the sample regression line</p></li>
+<li><p><span class="math inline">\(\text{SE}_{\hat\beta_i}\)</span> is the standard error of the slope</p></li>
+</ul></li>
+<li><p>We can construct confidence intervals as follows:</p></li>
+</ul>
+<p><span class="math display">\[ \hat{\beta}_i \pm Z_{1-\alpha/2} \text{SE}_{\hat{\beta}_i} \]</span></p>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="analysis-of-the-current-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/tiffw89/Proseminar/edit/master/04-datavariablesmethods.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/tiffw89/Proseminar/blob/master/04-datavariablesmethods.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

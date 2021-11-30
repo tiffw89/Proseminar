@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Analysis of the Current Data | A statistical Analysis of Aviation Wildlife Mishaps</title>
+  <meta name="description" content="Chapter 3 Analysis of the Current Data | A statistical Analysis of Aviation Wildlife Mishaps" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Analysis of the Current Data | A statistical Analysis of Aviation Wildlife Mishaps" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Analysis of the Current Data | A statistical Analysis of Aviation Wildlife Mishaps" />
+  
+  
+  
+
+<meta name="author" content="Tiffany Waller" />
+
+
+<meta name="date" content="2021-11-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="methods.html"/>
+<link rel="next" href="conclusions.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Wildlife Analysis</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section"></a></li>
+<li class="chapter" data-level="" data-path="approval-page.html"><a href="approval-page.html"><i class="fa fa-check"></i>Approval Page</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#statement-of-problem"><i class="fa fa-check"></i><b>1.1</b> Statement of Problem</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#relevance-of-problem"><i class="fa fa-check"></i><b>1.2</b> Relevance of Problem</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#literature-review"><i class="fa fa-check"></i><b>1.3</b> Literature Review</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#previous-research"><i class="fa fa-check"></i><b>1.3.1</b> Previous Research</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>2</b> Methods</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="methods.html"><a href="methods.html#data"><i class="fa fa-check"></i><b>2.1</b> Data</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="methods.html"><a href="methods.html#variables"><i class="fa fa-check"></i><b>2.1.1</b> Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="methods.html"><a href="methods.html#statistical-methods"><i class="fa fa-check"></i><b>2.2</b> Statistical Methods</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="methods.html"><a href="methods.html#linear-regression"><i class="fa fa-check"></i><b>2.2.1</b> Linear Regression</a></li>
+<li class="chapter" data-level="2.2.2" data-path="methods.html"><a href="methods.html#logistic-regression"><i class="fa fa-check"></i><b>2.2.2</b> Logistic Regression</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="analysis-of-the-current-data.html"><a href="analysis-of-the-current-data.html"><i class="fa fa-check"></i><b>3</b> Analysis of the Current Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="analysis-of-the-current-data.html"><a href="analysis-of-the-current-data.html#analysis-results"><i class="fa fa-check"></i><b>3.1</b> Analysis Results</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>4</b> Conclusions</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="conclusions.html"><a href="conclusions.html#summary-interpretation"><i class="fa fa-check"></i><b>4.1</b> Summary: Interpretation</a></li>
+<li class="chapter" data-level="4.2" data-path="conclusions.html"><a href="conclusions.html#limitations"><i class="fa fa-check"></i><b>4.2</b> Limitations</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A statistical Analysis of Aviation Wildlife Mishaps</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="analysis-of-the-current-data" class="section level1" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Analysis of the Current Data</h1>
+<div class="line-block">      With this particular set of data, ordinary linear regression was not appropriate. In addition, all of the outcome variables in this set are categorical (nominal, ordinal), not continuous. Therefore, the most appropriate type of analysis is logistic regression, since logistic regression estimates the probability of a categorical response. The bird strike data was analyzed with both binary and ordinal logistic regression. Outcomes of interest include: Indicated Damage and Damage Level. Indicated damage was analyzed using binary logistic regression while damage level was analyzed using ordinary logistic regression. Predictors of interest include: size of bird, sky conditions, warning indication, time of day, and engine ingestion.</div>
+<p>Results are shown as the odds ratio with its 95% confidence interval. Both unadjusted and adjusted analyses were conducted. Statistical significance was defined  as <span class="math inline">\(p&lt;0.05\)</span>.</p>
+<div id="analysis-results" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Analysis Results</h2>
+<p>###INDICATED DAMAGE###</p>
+<p><em>Unadjusted associations</em></p>
+<p>The estimated models can be written as:</p>
+<p><span class="math display">\[ \text{logit} \left({\pi} \right) = -0.62  -3.16 \text{Small} -1.26 \text{Medium}\]</span></p>
+<p><span class="math display">\[ \text{logit} \left({\pi} \right) = -1.98  -0.48 \text{Warned} \]</span></p>
+<p><span class="math display">\[ \text{logit} \left({\pi} \right) = -2.77 + 2.27 \text{Ingested} \]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th>Predictor</th>
+<th>Odds Ratios (95% CI)</th>
+<th><em>p</em>-value</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Size: Small</td>
+<td>0.043</td>
+<td>(0.041, 0.045)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="even">
+<td>Size: Medium</td>
+<td>0.282</td>
+<td>(0.271, 0.294)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="odd">
+<td>Size: Large</td>
+<td>reference</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Warned: Yes</td>
+<td>0.617</td>
+<td>(0.591,0.645)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="odd">
+<td>Warned: No</td>
+<td>reference</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ingested: Yes</td>
+<td>9.688</td>
+<td>(9.284,10.107)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="odd">
+<td>Ingested: No</td>
+<td>reference</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Small birds’ odds of damaging the aircraft are 0.043 times that of large birds. Medium birds’ odds of damaging the aircraft are 0.282 times that of large birds. The odds of damaging the aircraft when the pilot is warned are 0.617 times that of not being warned. The odds of damaging the aircraft when a bird is ingested are 9.688 times that of not being ingested.</p>
+<p><br></p>
+<p><em>Adjusted associations: Indicated Damage ~ Size + Warned + Ingested</em></p>
+<p><span class="math display">\[ \text{logit} \left({\pi} \right) = -0.21  -3.18 {\text{Small}} -1.42 {\text{Medium}} -0.43 \text{Warned} + 2.14 \text{Ingested} \]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th>Predictor</th>
+<th>Odds Ratios</th>
+<th>(95% CI)</th>
+<th><em>p</em>-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Size: Small</td>
+<td>0.042</td>
+<td>(0.039, 0.045)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="even">
+<td>Size: Medium</td>
+<td>0.242</td>
+<td>(0.228, 0.257)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="odd">
+<td>Size: Large</td>
+<td>reference</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Warned: Yes</td>
+<td>0.648</td>
+<td>(0.616, 0.68)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="odd">
+<td>Warned: No</td>
+<td>reference</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ingested: Yes</td>
+<td>8.517</td>
+<td>(7.947, 9.127)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="odd">
+<td>Ingested: No</td>
+<td>reference</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Small birds’ odds of damaging the aircraft are 0.042 times that of large birds. Medium birds’ odds of damaging the aircraft are 0.242 times that of large birds. The odds of damaging the aircraft when the pilot is warned are 0.648 times that of not being warned. The odds of damaging the aircraft when a bird is ingested are 8.517 times that of not being ingested.</p>
+<p>###DAMAGE LEVEL###</p>
+<p><em>Undjusted associations: Damage Level</em></p>
+<p>The estimated models can be written as:</p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 1) = -2.33 1.01\text{Day} -7.64\text{Dusk} -2.85\text{Night}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 2) = 3.75 1.01\text{Day} -7.64\text{Dusk} -2.85\text{Night}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 3) = 0.04 1.01\text{Day} -7.64\text{Dusk} -2.85\text{Night}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 4) = 0.12 1.01\text{Day} -7.64\text{Dusk} -2.85\text{Night}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 1) = -2.85 + 1.01\text{Overcast} + -7.64\text{SomeClouds}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 2) = -2.33 + 1.01\text{Overcast} + -7.64\text{SomeClouds}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 3) = 3.75 + 1.01\text{Overcast} + -7.64\text{SomeClouds}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 4) = 0.04 + 1.01\text{Overcast} + -7.64\text{SomeClouds}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 1) = -2.85 + -7.64\text{Small} + 1.01\text{Medium}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 2) = -2.33 + -7.64\text{Small} + 1.01\text{Medium}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 3) = 3.75 + -7.64\text{Small} + 1.01\text{Medium}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 4) = 0.04 + -7.64\text{Small} + 1.01\text{Medium}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 1) = -7.64 + 1.01\text{Warned}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 2) = -2.85 + 1.01\text{Warned}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 3) = -2.33 + 1.01\text{Warned}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 4) = 3.75 + 1.01\text{Warned}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 1) = -7.64 + 1.01\text{Ingested}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 2) = -2.85 + 1.01\text{Ingested}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 3) = -2.33 + 1.01\text{Ingested}\)</span></p>
+<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 4) = 3.75 + 1.01\text{Ingested}\)</span></p>
+<p><em>Undjusted associations: Damage Level</em></p>
+<table>
+<thead>
+<tr class="header">
+<th>Predictor</th>
+<th>Odds Ratios</th>
+<th>(95% CI)</th>
+<th><em>p</em>-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Time of Day: Day</td>
+<td>0.893, (0.808,0.986)</td>
+<td>&lt; 0.001</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Time of Day: Dusk</td>
+<td>0.799, (0.704,0.907)</td>
+<td>&lt; 0.001</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Time of Day: Night</td>
+<td>0.801, (0.723,0.886)</td>
+<td>&lt; 0.001</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Time of Day: Dawn</td>
+<td>reference</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Sky: Overcast</td>
+<td>1.065, (1.01,1.123)</td>
+<td>&lt; 0.05</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Sky: Some Clouds</td>
+<td>1.061, (1.018,1.106)</td>
+<td>&lt; 0.001</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Sky: No Clouds</td>
+<td>reference</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Size: Small</td>
+<td>2.652 (2.516, 2.795)</td>
+<td>&lt; 0.001</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Size: Medium</td>
+<td>5.326 (5.056, 5.61)</td>
+<td>&lt; 0.001</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Size: Large</td>
+<td>reference</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Warned: Yes</td>
+<td>1.239, (1.188,1.293)</td>
+<td>&lt; 0.001</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Warned: No</td>
+<td>reference</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ingested: Yes</td>
+<td>2.743, (2.547,2.954)</td>
+<td>&lt; 0.001</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ingested: No</td>
+<td>reference</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The odds of damaging the aircraft during the day are 0.893 times that of during dawn. The odds of damaging the aircraft during dusk are 0.799 times that of during dawn. The odds of damaging the aircraft during the night are 0.801 times that of during dawn. The odds of damaging the aircraft with overcast skies are 1.065 times that of no clouds. The odds of damaging the aircraft with some clouds in the sky are 0.799 times that of no clouds. Small birds’ odds of damaging the aircraft are 2.652 times that of large birds. Medium birds’ odds of damaging the aircraft are 5.326 times that of large birds. The odds of damaging the aircraft when the pilot is warned are 1.239 times that of not being warned. The odds of damaging the aircraft when a bird is ingested are 2.743 times that of not being ingested.</p>
+<p><br></p>
+<p><em>Adjusted associations: Damage Level</em></p>
+<table>
+<thead>
+<tr class="header">
+<th>Predictor</th>
+<th>Odds Ratios</th>
+<th>(95% CI)</th>
+<th><em>p</em>-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TIME OF DAY: Day</td>
+<td>0.844</td>
+<td>(0.747,0.952)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="even">
+<td>TIME OF DAY: Dusk</td>
+<td>0.867</td>
+<td>(0.743,1.011)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="odd">
+<td>TIME OF DAY: Night</td>
+<td>0.887</td>
+<td>(0.782,1.004)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="even">
+<td>Ingested: Yes</td>
+<td>3.489</td>
+<td>(3.122,3.897)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="odd">
+<td>Size: Small</td>
+<td>6.105</td>
+<td>(5.705,2.576)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="even">
+<td>Size: Medium</td>
+<td>2.404</td>
+<td>(2.242,6.53)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="odd">
+<td>Warned: Yes</td>
+<td>1.147</td>
+<td>(1.096,1.201)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="even">
+<td>Sky: Overcast</td>
+<td>1.092</td>
+<td>(1.026,1.162)</td>
+<td>&lt; 0.05</td>
+</tr>
+<tr class="odd">
+<td>Sky: Some Clouds</td>
+<td>1.052</td>
+<td>(1.001,1.106)</td>
+<td>&lt; 0.001</td>
+</tr>
+</tbody>
+</table>
+<p><em>Multiple Regression Model: Damage Level</em></p>
+<table>
+<thead>
+<tr class="header">
+<th>Intercept</th>
+<th>Day</th>
+<th>Dusk</th>
+<th>Night</th>
+<th>Ingested</th>
+<th>Small</th>
+<th>Medium</th>
+<th>Warned</th>
+<th>Overcast</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>-7.25</td>
+<td>-0.17</td>
+<td>-0.14</td>
+<td>-0.12</td>
+<td>1.25</td>
+<td>0.88</td>
+<td>1.81</td>
+<td>0.14</td>
+<td>0.09</td>
+</tr>
+<tr class="even">
+<td>-1.6</td>
+<td>-0.17</td>
+<td>-0.14</td>
+<td>-0.12</td>
+<td>1.25</td>
+<td>0.88</td>
+<td>1.81</td>
+<td>0.14</td>
+<td>0.09</td>
+</tr>
+<tr class="odd">
+<td>-1.04</td>
+<td>-0.17</td>
+<td>-0.14</td>
+<td>-0.12</td>
+<td>1.25</td>
+<td>0.88</td>
+<td>1.81</td>
+<td>0.14</td>
+<td>0.09</td>
+</tr>
+<tr class="even">
+<td>5.24</td>
+<td>-0.17</td>
+<td>-0.14</td>
+<td>-0.12</td>
+<td>1.25</td>
+<td>0.88</td>
+<td>1.81</td>
+<td>0.14</td>
+<td>0.09</td>
+</tr>
+</tbody>
+</table>
+<p><em>Interpretation: Multiple Regression: Damage Level</em></p>
+<p>The odds of damaging the aircraft during the day are 0.844 times that of during dawn. The odds of damaging the aircraft during dusk are 0.867 times that of during dawn. The odds of damaging the aircraft during the night are 0.887 times that of during dawn. The odds of damaging the aircraft when a bird is ingested are 3.489 times that of not being not being ingested. Small birds’ odds of damaging the aircraft are 6.105 times that of large birds. Medium birds’ odds of damaging the aircraft are 2.404 times that of large birds. The odds of damaging the aircraft when the pilot is warned are 1.147 times that of not being warned. The odds of damaging the aircraft with overcast skies are 1.092 times that of no clouds. The odds of damaging the aircraft with some clouds in the sky are 1.052 times that of no clouds.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="methods.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conclusions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/tiffw89/Proseminar/edit/master/05-analysisresults.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/tiffw89/Proseminar/blob/master/05-analysisresults.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
