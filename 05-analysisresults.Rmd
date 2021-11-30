@@ -1,7 +1,6 @@
 # Analysis of the Current Data 
 
-|       With this particular set of data, ordinary linear regression was not appropriate. In addition, all of the outcome variables in this set are categorical (nominal, ordinal), not continuous. Therefore, the most appropriate type of analysis is logistic regression, since logistic regression estimates the probability of a categorical response. The bird strike data was analyzed with both binary and ordinal logistic regression. Outcomes of interest include: Indicated Damage and Damage Level. Indicated damage was analyzed using binary logistic regression while damage level was analyzed using ordinary logistic regression. Predictors of interest include: size of bird, sky conditions, warning indication, time of day, and engine ingestion.
-Results are shown as the odds ratio with its 95% confidence interval. Both unadjusted and adjusted analyses were conducted. Statistical significance was defined \textit{a priori} as $p<0.05$.
+|       With this particular set of data, ordinary linear regression was not appropriate. In addition, all of the outcome variables in this set are categorical (nominal, ordinal), not continuous. Therefore, the most appropriate type of analysis is logistic regression, since logistic regression estimates the probability of a categorical response. The bird strike data was analyzed with both binary and ordinal logistic regression. Outcomes of interest include: Indicated Damage and Damage Level. Indicated damage was analyzed using binary logistic regression while damage level was analyzed using ordinary logistic regression. Predictors of interest include: size of bird, sky conditions, warning indication, time of day, and engine ingestion. Results are shown as the odds ratio with its 95% confidence interval. Both unadjusted and adjusted analyses were conducted. Statistical significance was defined \textit{a priori} as $p<0.05$.
  
 ## Analysis Results
  
@@ -62,19 +61,21 @@ c3 <- c3 %>% rename(lb = `2.5 %`,
                     ub = `97.5 %`)
 ```
 
-###INDICATED DAMAGE###
+### INDICATED DAMAGE
 
-*Unadjusted associations*
+#### Unadjusted Associations
 
 The estimated models can be written as:
 
-\[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm1))[,1][1], 2)`  `r round(coef(summary(glm1))[,1][3], 2)` \text{Small} `r round(coef(summary(glm1))[,1][2], 2)` \text{Medium}\]
+- \[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm1))[,1][1], 2)`  `r round(coef(summary(glm1))[,1][3], 2)` \text{Small} `r round(coef(summary(glm1))[,1][2], 2)` \text{Medium}\]
 
-\[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm2))[,1][1], 2)`  `r round(coef(summary(glm2))[,1][2], 2)` \text{Warned} \]
+- \[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm2))[,1][1], 2)`  `r round(coef(summary(glm2))[,1][2], 2)` \text{Warned} \]
 
-\[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm3))[,1][1], 2)` + `r round(coef(summary(glm3))[,1][2], 2)` \text{Ingested} \]
+- \[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm3))[,1][1], 2)` + `r round(coef(summary(glm3))[,1][2], 2)` \text{Ingested} \]
 
-| Predictor | Odds Ratios (95% CI)  |  *p*-value |
+#### Undjusted associations: Odds Ratios
+
+| Predictor | Odds Ratios | (95% CI)  |  *p*-value |
 |---|---|---|---|
 | Size: Small  | `r o1$value[3]` | (`r c1$lb[3]`, `r c1$ub[3]`)  |  < 0.001  |
 | Size: Medium |  `r o1$value[2]` | (`r c1$lb[2]`, `r c1$ub[2]`)  | < 0.001   |
@@ -90,7 +91,7 @@ Small birds' odds of damaging the aircraft are `r o1$value[3]` times that of lar
 
 <br>
 
-*Adjusted associations: Indicated Damage ~ Size + Warned + Ingested*
+#### Adjusted associations: Indicated Damage ~ Size + Warned + Ingested*
 
 ```{r, include=FALSE}
 strike.reports <- read.csv("C:/Users/crack/Desktop/Proseminar/strike reports.csv")
@@ -111,7 +112,11 @@ c1 <- c1 %>% rename(lb = `2.5 %`,
                     ub = `97.5 %`)
 ```
 
-\[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm11))[,1][1], 2)`  `r round(coef(summary(glm11))[,1][3], 2)` {\text{Small}} `r round(coef(summary(glm11))[,1][2], 2)` {\text{Medium}} `r round(coef(summary(glm11))[,1][4], 2)` \text{Warned} + `r round(coef(summary(glm11))[,1][5], 2)` \text{Ingested} \]
+The estimated model can be written as:
+
+- \[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm11))[,1][1], 2)`  `r round(coef(summary(glm11))[,1][3], 2)` {\text{Small}} `r round(coef(summary(glm11))[,1][2], 2)` {\text{Medium}} `r round(coef(summary(glm11))[,1][4], 2)` \text{Warned} + `r round(coef(summary(glm11))[,1][5], 2)` \text{Ingested} \]
+
+#### Adjusted associations: Odds Ratios
 
 | Predictor | Odds Ratios | (95% CI)  |  *p*-value |
 |---|---|---|---|
@@ -139,7 +144,7 @@ summary(m5)
 # calculate and store p values
 p <- pnorm(abs(ctable[, "t value"]), lower.tail = FALSE) * 2
 #combined table
-(ctable2 <- (cbind(ctable, "p value" = p)))
+(ctable1 <- (cbind(ctable, "p value" = p)))
 ## OR and CI
 (ci <- confint(m5))
 exp(cbind(OR = coef(m5), ci))
@@ -184,7 +189,7 @@ ctable <- coef(summary(m8))
 # calculate and store p values
 p <- pnorm(abs(ctable[, "t value"]), lower.tail = FALSE) * 2
 #combined table
-(ctable2 <- cbind(ctable, "p value" = p))
+(ctable4 <- cbind(ctable, "p value" = p))
 
 ## OR and CI
 (ci <- confint(m8))
@@ -211,7 +216,7 @@ summary(m)
 # calculate and store p values
 p <- pnorm(abs(ctable[, "t value"]), lower.tail = FALSE) * 2
 #combined table
-(ctable2 <- (cbind(ctable, "p value" = p)))
+(ctable5 <- (cbind(ctable, "p value" = p)))
 ## OR and CI
 (ci <- confint(m))
 exp(cbind(OR = coef(m), t(ci)))
@@ -233,7 +238,7 @@ summary(m6)
 # calculate and store p values
 p <- pnorm(abs(ctable[, "t value"]), lower.tail = FALSE) * 2
 #combined table
-(ctable2 <- (cbind(ctable, "p value" = p)))
+(ctable3 <- (cbind(ctable, "p value" = p)))
 ## OR and CI
 (ci <- confint(m6))
 exp(cbind(OR = coef(m6), t(ci)))
@@ -242,53 +247,50 @@ c16 <- round(exp(cbind(OR = coef(m6), t(ci))),3)
 o6 <- as_tibble(round(exp(coef(summary(m6))[,1]),3))
 ```
 
-###DAMAGE LEVEL###
+### DAMAGE LEVEL
 
-*Undjusted associations: Damage Level*
+#### Undjusted associations: Damage Level*
 
 The estimated models can be written as:
 
-${\sf Logit}\hat{P}(Y \le 1) = `r round(ctable2[4],2)`  `r round(ctable2[1],2)`\text{Day}  `r round(ctable2[2],2)`\text{Dusk}  `r round(ctable2[3],2)`\text{Night}$
+|${\sf Logit}\hat{P}(Y \le j)$ | Intercept | Day | Dusk | Night |
+|---|---|---|---|---|
+|${\sf Logit}\hat{P}(Y \le 1)$|`r round(ctable1[4],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|
+|${\sf Logit}\hat{P}(Y \le 2)$|`r round(ctable1[5],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|
+|${\sf Logit}\hat{P}(Y \le 3)$|`r round(ctable1[6],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|
+|${\sf Logit}\hat{P}(Y \le 4)$|`r round(ctable1[7],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|
+      
+|${\sf Logit}\hat{P}(Y \le j)$ | Intercept |Overcast | SomeClouds |
+|---|---|---|---|
+|${\sf Logit}\hat{P}(Y \le 1)$|`r round(ctable2[3],2)`|`r round(ctable2[1],2)`|`r round(ctable2[2],2)`|
+|${\sf Logit}\hat{P}(Y \le 2)$|`r round(ctable2[4],2)`|`r round(ctable2[1],2)`|`r round(ctable2[2],2)`|
+|${\sf Logit}\hat{P}(Y \le 3)$| `r round(ctable2[5],2)`|`r round(ctable2[1],2)`|`r round(ctable2[2],2)`|
+|${\sf Logit}\hat{P}(Y \le 4)$|`r round(ctable2[6],2)`|`r round(ctable2[1],2)`|`r round(ctable2[2],2)`|
 
-${\sf Logit}\hat{P}(Y \le 2)  = `r round(ctable2[5],2)` `r round(ctable2[1],2)`\text{Day}  `r round(ctable2[2],2)`\text{Dusk}  `r round(ctable2[3],2)`\text{Night}$
+|${\sf Logit}\hat{P}(Y \le j)$ | Intercept | Small| Medium |
+|---|---|---|---|
+|${\sf Logit}\hat{P}(Y \le 1)$|`r round(ctable4[3],2)`|`r round(ctable4[2],2)`|`r round(ctable4[1],2)`|
+|${\sf Logit}\hat{P}(Y \le 2)$|`r round(ctable4[4],2)`|`r round(ctable4[2],2)`|`r round(ctable4[1],2)`|
+|${\sf Logit}\hat{P}(Y \le 3)$|`r round(ctable4[5],2)`|`r round(ctable4[2],2)`|`r round(ctable4[1],2)`|
+|${\sf Logit}\hat{P}(Y \le 4)$|`r round(ctable4[6],2)`|`r round(ctable4[2],2)`|`r round(ctable4[1],2)`|
 
-${\sf Logit}\hat{P}(Y \le 3) = `r round(ctable2[6],2)` `r round(ctable2[1],2)`\text{Day}  `r round(ctable2[2],2)`\text{Dusk}  `r round(ctable2[3],2)`\text{Night}$
+|${\sf Logit}\hat{P}(Y \le j)$ | Intercept | Warned|
+|---|---|---|
+|${\sf Logit}\hat{P}(Y \le 1)$|`r round(ctable5[2],2)`|`r round(ctable5[1],2)`|
+|${\sf Logit}\hat{P}(Y \le 2)$|`r round(ctable5[3],2)`|`r round(ctable5[1],2)`|
+|${\sf Logit}\hat{P}(Y \le 3)$|`r round(ctable5[4],2)`|`r round(ctable5[1],2)`|
+|${\sf Logit}\hat{P}(Y \le 4)$|`r round(ctable5[5],2)`|`r round(ctable5[1],2)`|
 
-${\sf Logit}\hat{P}(Y \le 4) =   `r round(ctable2[7],2)` `r round(ctable2[1],2)`\text{Day}  `r round(ctable2[2],2)`\text{Dusk}  `r round(ctable2[3],2)`\text{Night}$
+|${\sf Logit}\hat{P}(Y \le j)$ | Intercept | Ingested|
+|---|---|---|
+|${\sf Logit}\hat{P}(Y \le 1)$|`r round(ctable3[2],2)`|`r round(ctable2[1],2)`|
+|${\sf Logit}\hat{P}(Y \le 2)$|`r round(ctable3[3],2)`|`r round(ctable2[1],2)`|
+|${\sf Logit}\hat{P}(Y \le 3)$|`r round(ctable3[4],2)`|`r round(ctable2[1],2)`|
+|${\sf Logit}\hat{P}(Y \le 4)$|`r round(ctable3[5],2)`|`r round(ctable2[1],2)`|
 
-${\sf Logit}\hat{P}(Y \le 1) = `r round(ctable2[3],2)` + `r round(ctable2[1],2)`\text{Overcast} + `r round(ctable2[2],2)`\text{SomeClouds}$
 
-${\sf Logit}\hat{P}(Y \le 2) = `r round(ctable2[4],2)` + `r round(ctable2[1],2)`\text{Overcast} + `r round(ctable2[2],2)`\text{SomeClouds}$
 
-${\sf Logit}\hat{P}(Y \le 3) = `r round(ctable2[5],2)` + `r round(ctable2[1],2)`\text{Overcast} + `r round(ctable2[2],2)`\text{SomeClouds}$
-
-${\sf Logit}\hat{P}(Y \le 4) =  `r round(ctable2[6],2)` + `r round(ctable2[1],2)`\text{Overcast} + `r round(ctable2[2],2)`\text{SomeClouds}$
-
-${\sf Logit}\hat{P}(Y \le 1) = `r round(ctable2[3],2)` + `r round(ctable2[2],2)`\text{Small} + `r round(ctable2[1],2)`\text{Medium}$
-
-${\sf Logit}\hat{P}(Y \le 2) =  `r round(ctable2[4],2)` + `r round(ctable2[2],2)`\text{Small} + `r round(ctable2[1],2)`\text{Medium}$
-
-${\sf Logit}\hat{P}(Y \le 3) = `r round(ctable2[5],2)` + `r round(ctable2[2],2)`\text{Small} + `r round(ctable2[1],2)`\text{Medium}$
-
-${\sf Logit}\hat{P}(Y \le 4) = `r round(ctable2[6],2)` + `r round(ctable2[2],2)`\text{Small} + `r round(ctable2[1],2)`\text{Medium}$
-
-${\sf Logit}\hat{P}(Y \le 1) = `r round(ctable2[2],2)`  + `r round(ctable2[1],2)`\text{Warned}$
-
-${\sf Logit}\hat{P}(Y \le 2) = `r round(ctable2[3],2)` + `r round(ctable2[1],2)`\text{Warned}$
-
-${\sf Logit}\hat{P}(Y \le 3) = `r round(ctable2[4],2)`  + `r round(ctable2[1],2)`\text{Warned}$
-
-${\sf Logit}\hat{P}(Y \le 4) = `r round(ctable2[5],2)`  + `r round(ctable2[1],2)`\text{Warned}$
-
-${\sf Logit}\hat{P}(Y \le 1) = `r round(ctable2[2],2)`  + `r round(ctable2[1],2)`\text{Ingested}$
-
-${\sf Logit}\hat{P}(Y \le 2) = `r round(ctable2[3],2)` + `r round(ctable2[1],2)`\text{Ingested}$
-
-${\sf Logit}\hat{P}(Y \le 3) = `r round(ctable2[4],2)`  + `r round(ctable2[1],2)`\text{Ingested}$
-
-${\sf Logit}\hat{P}(Y \le 4) =   `r round(ctable2[5],2)`  + `r round(ctable2[1],2)`\text{Ingested}$
-
-*Undjusted associations: Damage Level*
+#### Undjusted associations: Odds Ratios
 
 | Predictor | Odds Ratios | (95% CI)  |  *p*-value |
 |---|---|---|---|
@@ -296,9 +298,9 @@ ${\sf Logit}\hat{P}(Y \le 4) =   `r round(ctable2[5],2)`  + `r round(ctable2[1],
 | Time of Day: Dusk | `r c5[2]`, (`r c5[5]`,`r c5[8]`) |  < 0.001 |
 | Time of Day: Night | `r c5[3]`, (`r c5[6]`,`r c5[9]`) |  < 0.001  |
 | Time of Day: Dawn | reference |  |
-|Sky: Overcast | `r c4[1]`, (`r c4[3]`,`r c4[5]`) | < 0.05 |
-|Sky: Some Clouds | `r c4[2]`, (`r c4[4]`,`r c4[6]`) |  < 0.001  |
-|Sky: No Clouds | reference | |
+| Sky: Overcast | `r c4[1]`, (`r c4[3]`,`r c4[5]`) | < 0.05 |
+| Sky: Some Clouds | `r c4[2]`, (`r c4[4]`,`r c4[6]`) |  < 0.001  |
+| Sky: No Clouds | reference | |
 | Size: Small  |  `r o8$value[1]`  (`r c8$lb[1]`, `r c8$ub[1]`)  |  < 0.001  |
 | Size: Medium |  `r o8$value[2]`  (`r c8$lb[2]`, `r c8$ub[2]`)  | < 0.001   |
 | Size: Large | reference | |
@@ -312,7 +314,7 @@ The odds of damaging the aircraft during the day are `r c5[1]` times that of dur
 <br>
 
 
-*Adjusted associations: Damage Level*
+#### Adjusted associations: Damage Level
 
 ```{r, include=FALSE}
 strike.reports <- read.csv("C:/Users/crack/Desktop/Proseminar/strike reports.csv")
@@ -337,6 +339,42 @@ exp(cbind(OR = coef(m5), ci))
 c1 <- round(exp(cbind(OR = coef(m5), ci)),3)
 
 ```
+
+
+| Intercept | Day | Dusk | Night | Ingested | Small | Medium | Warned | Overcast | Some Clouds |
+|---|---|---|---|---|---|---|---|---|
+|`r round(ctable1[10],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|`r round(ctable1[4],2)`|`r round(ctable1[5],2)`|`r round(ctable1[6],2)`|`r round(ctable1[7],2)`|`r round(ctable1[8],2)`| `round(ctable1[8],2)`|
+|`r round(ctable1[11],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|`r round(ctable1[4],2)`|`r round(ctable1[5],2)`|`r round(ctable1[6],2)`|`r round(ctable1[7],2)`|`r round(ctable1[8],2)`| `round(ctable1[8],2)`|
+|`r round(ctable1[12],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|`r round(ctable1[4],2)`|`r round(ctable1[5],2)`|`r round(ctable1[6],2)`|`r round(ctable1[7],2)`|`r round(ctable1[8],2)`| `round(ctable1[8],2)`|
+|`r round(ctable1[13],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|`r round(ctable1[4],2)`|`r round(ctable1[5],2)`|`r round(ctable1[6],2)`|`r round(ctable1[7],2)`|`r round(ctable1[8],2)`| `round(ctable1[8],2)`|
+
+
+
+```{r, include=FALSE}
+strike.reports <- read.csv("C:/Users/crack/Desktop/Proseminar/strike reports.csv")
+size4 <- strike.reports %>% filter((DAMAGE_LEVEL %in% c('D', 'M', 'M?', 'N', 'S')),(TIME_OF_DAY %in% c('Dawn', 'Day', 'Dusk', 'Night')),(SKY %in% c('No Cloud', 'Overcast', 'Some Cloud')),(SIZE %in% c('Large','Medium','Small')),(WARNED %in% c('No', 'Yes')))
+size4$DAMAGE_LEVEL = as.factor(size4$DAMAGE_LEVEL)
+size4$TIME_OF_DAY = as.factor(size4$TIME_OF_DAY)
+is.factor(size4$TIME_OF_DAY)
+size4$SKY = as.factor(size4$SKY)
+is.factor(size4$SKY)
+size4$DAMAGE_WARNED = as.factor(size4$WARNED)
+m5 <- polr(DAMAGE_LEVEL ~ TIME_OF_DAY + INGESTED + SIZE + WARNED + SKY, data = size4, Hess=TRUE)
+summary(m5)
+# store table
+(ctable <- coef(summary(m5)))
+# calculate and store p values
+p <- pnorm(abs(ctable[, "t value"]), lower.tail = FALSE) * 2
+#combined table
+(ctable1 <- (cbind(ctable, "p value" = p)))
+## OR and CI
+(ci <- confint(m5))
+exp(cbind(OR = coef(m5), ci))
+c1 <- round(exp(cbind(OR = coef(m5), ci)),3)
+
+```
+
+#### Adjusted associations: Odds Ratios 
 
 | Predictor | Odds Ratios | (95% CI)  |  *p*-value |
 |---|---|---|---|
@@ -351,41 +389,8 @@ c1 <- round(exp(cbind(OR = coef(m5), ci)),3)
 | Sky: Some Clouds | `r c1[9]` | (`r c1[18]`,`r c1[27]`) |  < 0.001  |
 
 
-```{r, include=FALSE}
-strike.reports <- read.csv("C:/Users/crack/Desktop/Proseminar/strike reports.csv")
-size4 <- strike.reports %>% filter((DAMAGE_LEVEL %in% c('D', 'M', 'M?', 'N', 'S')),(TIME_OF_DAY %in% c('Dawn', 'Day', 'Dusk', 'Night')),(SKY %in% c('No Cloud', 'Overcast', 'Some Cloud')),(SIZE %in% c('Large','Medium','Small')),(WARNED %in% c('No', 'Yes')))
-size4$DAMAGE_LEVEL = as.factor(size4$DAMAGE_LEVEL)
-size4$TIME_OF_DAY = as.factor(size4$TIME_OF_DAY)
-is.factor(size4$TIME_OF_DAY)
-size4$SKY = as.factor(size4$SKY)
-is.factor(size4$SKY)
-size4$DAMAGE_WARNED = as.factor(size4$WARNED)
-m5 <- polr(DAMAGE_LEVEL ~ TIME_OF_DAY + INGESTED + SIZE + WARNED + SKY, data = size4, Hess=TRUE)
-summary(m5)
-# store table
-(ctable <- coef(summary(m5)))
-# calculate and store p values
-p <- pnorm(abs(ctable[, "t value"]), lower.tail = FALSE) * 2
-#combined table
-(ctable1 <- (cbind(ctable, "p value" = p)))
-## OR and CI
-(ci <- confint(m5))
-exp(cbind(OR = coef(m5), ci))
-c1 <- round(exp(cbind(OR = coef(m5), ci)),3)
 
-```
-
-*Multiple Regression Model: Damage Level*
-
-| Intercept | Day | Dusk | Night | Ingested | Small | Medium | Warned | Overcast | Some Clouds |
-|---|---|---|---|---|---|---|---|---|
-|`r round(ctable1[10],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|`r round(ctable1[4],2)`|`r round(ctable1[5],2)`|`r round(ctable1[6],2)`|`r round(ctable1[7],2)`|`r round(ctable1[8],2)`| `round(ctable1[8],2)`|
-|`r round(ctable1[11],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|`r round(ctable1[4],2)`|`r round(ctable1[5],2)`|`r round(ctable1[6],2)`|`r round(ctable1[7],2)`|`r round(ctable1[8],2)`| `round(ctable1[8],2)`|
-|`r round(ctable1[12],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|`r round(ctable1[4],2)`|`r round(ctable1[5],2)`|`r round(ctable1[6],2)`|`r round(ctable1[7],2)`|`r round(ctable1[8],2)`| `round(ctable1[8],2)`|
-|`r round(ctable1[13],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|`r round(ctable1[4],2)`|`r round(ctable1[5],2)`|`r round(ctable1[6],2)`|`r round(ctable1[7],2)`|`r round(ctable1[8],2)`| `round(ctable1[8],2)`|
-
-
-*Interpretation: Multiple Regression: Damage Level*
+#### Adjusted associations: Multiple Regression: Damage Level*
 
 ```{r, include=FALSE}
 strike.reports <- read.csv("C:/Users/crack/Desktop/Proseminar/strike reports.csv")
