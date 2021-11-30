@@ -1,7 +1,5 @@
 
-### Final stage
-
-- [ ] 1. In `index.Rmd`, change YOUR TITLE HERE to your title. 
+### Final stages
 
 - [ ] 2. In `index.Rmd`, change YOUR NAME HERE to your name.
 
