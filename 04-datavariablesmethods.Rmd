@@ -1,0 +1,227 @@
+# Methods
+
+## Data
+
+
+|          The wildlife strike data in this project comes directly from the Federal Aviation Administration, where data is contributed in real-time when a strike occurs. Data becomes available when a bird strike is reported to the FAA by an airline or some other aviation industry. The airline or other pilots are required to report this data only when a strike occurs. Thus, there is not data available for every single flight, only those that have experienced a wildlife strike. While there is data available from 1990 to this very day, this project only uses the data through the end of 2020. Additionally, this project concentrates specifically on bird strikes. [2]
+
+
+### Variables 
+
+#### Predictor Variables 
+
+- Sky: Type of cloud cover
+  - No Cloud
+  - Overcast
+  - Some Clouds
+
+- Time of Day: Light conditions
+  - Dawn
+  - Day
+  - Dusk
+  - Night 
+
+- Size: Size of bird as reported by the pilot
+  - Small 
+  - Medium
+  - Large
+
+- Warned: Pilot warned of birds/wildlife
+  - Yes
+  - No
+
+- Ingested: Aircraft engine ingested the bird
+  - Yes
+  - No
+
+#### Outcome Variables 
+
+- Number of Injuries: Number of people injured
+
+- Indicated Damage: Indicates whether or not aircraft was damaged
+  - Yes
+  - No
+  
+- Damage
+  - None: No damage was reported
+  
+  - Minor: When the aircraft can be rendered airworthy by simple repairs or replacements and an extensive inspection is not necessary
+  
+  - Substantial: When the aircraft incurs damage or structural failure which adversely affects the structure, strength, performance or flight characteristics of the aircraft and which would normally require major repair or replacement of the affected component
+  
+  - Destroyed: When the damage sustained makes it inadvisable to restore the aircraft to an airworthy condition.
+  
+  - Uncertain: The aircraft was damaged, but details as to the extent of the damage are lacking
+  
+## Statistical Methods 
+
+### Linear Regression 
+
+Ordinary linear regression is a method commonly used to estimate a statistical relationship between two or more variables by constructing a surface that approximates their relationship. 
+
+*Model*
+
+- The linear model obtained is of the form: 
+
+\[ Y = \beta_0 + \beta_1 X_1 + \cdots + \beta_k X_k \]
+
+- $Y$ is the continuous outcome
+
+- $X_i$ is the $i^{\text{th}}$ predictor; $i = 1, \cdots, k$, where $k$ is the number of predictors in the model
+
+- $\beta_i$ is the slope for predictor $i$
+
+- $\beta_0$ is the $Y$-intercept
+
+*Assumptions of the Model*
+
+1. Homoscedasticity: the residual has constant variance for any value of $X$ 
+
+2. Independence: observations are independent from one another
+
+3. Linearity: there exists a linear relationship between the two variables $X$ and $Y$
+
+4. Normality: the residuals are normally distributed
+
+*Interpretation*
+
+- We interpret $\hat{\beta}_i$ for continuous predictors as follows: for a one unit increase in $X_i$, $Y$ increases or decreases by $|\hat{\beta}_i|$. There is an increase if $\hat{\beta}_i > 0$ and a decrease if $\hat{\beta}_i < 0$.
+
+- We interpret $\hat{\beta}_i$ for categorical predictors as follows: the average difference between the group of interest and the reference group is $\hat{\beta}$.
+
+*Inference*
+
+- A hypotheses test is used to draw conclusions on the basis of statistical testing ($t$ test):
+  
+  - $H_0: \ \beta_i = 0$
+  
+  - $H_1: \ \beta_i \ne 0$
+
+- The test statistic is defined by the following equation: \[ t_0 = \frac{\hat{\beta}_i}{\text{SE}_{\hat{\beta}_i}} \] 
+  
+  - $\hat\beta_i$ is the slope of the sample regression line
+
+  - $SE_{\hat\beta_i}$ is the standard error of the slope
+
+
+- We can construct confidence intervals as follows:
+
+\[ \hat{\beta}_i \pm t_{\alpha/2, n-k-1} \text{SE}_{\hat{\beta}_i} \]
+
+
+### Logistic Regression 
+ 
+When outcomes are not continuous, linear regression is not appropriate. In the case of categorical outcomes, logistic regression should be used. Logistic regression models the log-odds of a categorical response. The type of categorical outcome (binomial, multinomial, or ordinal) will dictate the type of logistic regression used. 
+
+
+#### Binary Logistic Regression 
+
+Binary logistic regression is appropriate for categorical outcomes with only two possible responses. Often this is yes or no data (e.g., an event happening), but it does not have to be.
+
+
+*Model*
+
+- The binary logistic regression model is as follows:
+
+\[ \ln \left( \frac{\pi}{1-\pi} \right) = \beta_0 + \beta_1 X_1 + \cdots + \beta_k X_k \]
+
+- $\pi=P[Y=1]$ = the probability of the outcome
+
+- $X_i$ is the $i^{\text{th}}$ predictor; $i = 1, \cdots, k$, where $k$ is the number of predictors in the model
+
+- $\beta_i$ is the slope for predictor $i$
+
+- $\beta_0$ is the $Y$-intercept
+
+*Assumptions of the Model*
+
+1. Binary outcome: the response variable is binary
+
+2. Independence: observations are independent from one another
+
+3. Linearity: there exists a linear relationship between $X$ and the log-odds
+
+*Interpretation*
+
+- The odds ratio is found by exponentiating the slope:
+\[ \hat{\text{OR}}_i = e^{\hat{\beta}_i} \]
+
+- We can then interpret the odds ratio as follows: for a 1 [unit] increase in $X_i$, we expect the odds of outcome to be multiplied by the odds ratio [$e^{\hat{\beta}_i}$].
+
+*Inference*
+
+- Hypotheses testing can then be accomplished for the odds ratio:
+
+\[ H_0:{\text{OR}}_i = {\text{OR}}_i^{(0)} | OR_i≥ {\text{OR}}_i^{(0)}|OR_i≤{\text{OR}}_i^{(0)} \]
+
+\[ H_1:{\text{OR}}_i = {\text{OR}}_i^{(0)} | OR_i≥ {\text{OR}}_i^{(0)}|OR_i≤{\text{OR}}_i^{(0)} \]
+
+- The test statistic is defined by the following equation: \[ z_0 = \frac{ \hat{\beta}_i-\text{ln}{\text{(OR)}_i^{(0)}}}{\text{SE}_{\hat{\beta}_i}} \]
+
+  - $\hat\beta_i$ is the slope of the sample regression line
+
+  - $\text{SE}_{\hat\beta_i}$ is the standard error of the slope
+
+- We can construct confidence intervals as follows:
+
+\[ \hat{\beta}_i \pm Z_{1-\alpha/2} \text{SE}_{\hat{\beta}_i} \]
+
+#### Ordinal Logistic Regression Model
+
+Ordinal logistic regression is appropriate for categorical outcomes with ordinal responses; responses are not required to be binary as in binary logistic regression.
+
+*Model*
+
+- The ordinal logistic regression model is as follows:
+
+\[ \text{logit}(P[Y\le j])=\text{ln}\left(\frac{\pi_1 + \cdots + \pi_j}{{\pi_{j+1}} + \cdots + {\pi_c}}\right) = \hat\beta_{0j} + \hat\beta_{1}X_1 + \cdots + \hat\beta_{k}X_k  \]
+
+- $\text{logit}(P[Y\le j])$ is the probability that our outcome is in category $j$ or one below it
+  
+- $Y$ is an ordinal outcome
+
+- $X_i$ is the $i^{\text{th}}$ predictor; $i = 1, \dots, k$, where $k$ is the number of predictors in the model
+
+- $\beta_i$ is the slope for predictor $i$
+
+- $\beta_{0j}$ is the $Y$-intercept for the model comparing $Y \le j$ to $Y > j$
+
+
+*Assumptions of the Model*
+
+1. Ordinal response: the response variable is ordinal
+
+2. Independence: observations are independent of one another
+
+3. Linearity: there exists a linear relationship between $X$ and the cumulative logit
+
+4. Proportional odds: for all predictors in the model, the odds ratios will be the same, regardless of any two outcomes selected for comparison
+
+*Interpretation*
+
+
+Odds ratios are interpreted slightly different than what we saw in binary logistic regression due to the model being cumulative. Odds ratios can be found by exponentiating the coefficients. 
+
+- The odds ratio is found by exponentiating the slope:
+\[ \hat{\text{OR}}_i = e^{\hat{\beta}_i} \]
+
+- We can then interpret the odds ratio as follows: for a 1 [unit] increase in $x$, the odds in favor of the response category $j$ or lower are multiplied by the odds ratio [$e^{\hat{\beta}_i}$].
+
+*Inference*
+
+- Hypotheses testing can then be accomplished for the odds ratio:
+
+\[ H_0:{\text{OR}}_i = {\text{OR}}_i^{(0)} | OR_i≥ {\text{OR}}_i^{(0)}|OR_i≤{\text{OR}}_i^{(0)} \]
+
+\[ H_1:{\text{OR}}_i = {\text{OR}}_i^{(0)} | OR_i≥ {\text{OR}}_i^{(0)}|OR_i≤{\text{OR}}_i^{(0)} \]
+
+- The test statistic is defined by the following equation: \[ z_0 = \frac{ \hat{\beta}_i-\text{ln}{\text{(OR)}_i^{(0)}}}{\text{SE}_{\hat{\beta}_i}} \]
+
+  - $\hat\beta_i$ is the slope of the sample regression line
+
+  - $\text{SE}_{\hat\beta_i}$ is the standard error of the slope
+
+- We can construct confidence intervals as follows:
+
+\[ \hat{\beta}_i \pm Z_{1-\alpha/2} \text{SE}_{\hat{\beta}_i} \]
+

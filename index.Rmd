@@ -5,5 +5,36 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-# Down the bunny-hole
+
+#  {-}
+
+
+<center>
+
+By: Tiffany Waller
+
+Advisor: Dr. Samantha Seals
+
+
+
+
+
+<br>
+
+<br>
+
+
+An Undergraduate Proseminar
+
+In Partial Fulfillment of the Degree of
+
+Bachelor of Science in Mathematics 
+
+The University of West Florida
+
+December 2021
+
+</center>
+
+
 

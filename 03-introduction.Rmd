@@ -1,0 +1,38 @@
+# Introduction 
+ 
+|        On a cold New York morning, shortly after take-off, Captain Chesley B. Sullenberger’s aircraft struck a large group of Canadian geese, which caused the plane’s engines to fail. What was typically a routine flight quickly turned into a dire situation as the aircraft was over a major metropolitan area. Captain Sullenberger then safely landed the plane in the middle of New York City's Hudson River. Captain Sullenberger’s decisive actions ensured the safety of 160 passengers and 7 crew members that day, but the experience highlighted the harsh reality of what can occur when wildlife and aviation mix. This phenomenal feat of airmanship became known as the "Miracle on the Hudson." [1]
+
+
+## Statement of Problem 
+
+|       The existence of wildlife pose a severe threat to aviation both in flight and during take-off/landings. Wildlife strikes can cause extreme damage to aircraft, sometimes resulting in a minor mishap or worse. While there are some mitigation efforts available, there is currently no solid way of predicting a strike. The purpose of this report is to find correlations in bird strike data between aircraft damage and the following predictor variables: size of bird, sky conditions, warning indication, time of day, and engine ingestion.
+
+
+## Relevance of Problem 
+
+|        A wildlife strike occurs when an animal, such as a bird or some other species, comes into contact with an airplane during flight operations. Wildlife, more specifically birds, are incredibly dangerous when encountered in aviation and can be cause for an ominous situation. The Federal Aviation Administration (FAA) has been tracking wildlife strikes since around 1990 in both military and civilian flying organizations. According to the FAA, there have been approximately 230,000 strikes reported in the United States since tracking initiatives began. [2]
+
+
+## Literature Review 
+
+### Previous Research 
+
+|         There have been several notable analyses done on strike data. In 1998, the United States Air Force funded a research project performed by Christine A. Tedrow to analyze the occurrence of bird strikes to military aircraft. The purpose of this study was to determine economic costs associated with bird strikes and to identify safety concerns in order to determine appropriate precautionary measures. The strike data analysis pin-pointed various trends relating to damaging bird strikes. Several statistical methods were used in this research, including logistic regression. It was found that the following variables were concluded to be strong predictors of a damaging bird strike: aircraft group, phase of flight, aircraft speed, taxonomic group, and bird mass. It was also notable that the hours during daylight and dusk were hazardous times for bird strikes. The last outcome of the military strike report project found that the highest bird strike rate of all military aircraft occurred in bomber aircraft. [3]
+
+
+<br>
+
+|          In 2011, Richard Dolbeer conducted similar research on trends of damaging bird strikes. This report focused solely on aircraft outside the boundary of each respective airport. The rates were compared in 5 year increments from 1990-2009. Dolbeer used linear regression to complete the analysis and to determine any statistically significant trends, specifically at less than than 500 feet above ground level. Dolbeer concluded that after the implementation of mitigations efforts, there had been a reduction of strikes within the boundaries of the airport. In addition, Dolbeer suggested further development of bird-migration forecasting as well as the need for enhancing aircraft bird detection technology. [4]
+
+
+<br>
+
+|          Also in 2011, a study on bird strikes suggested that aircraft visibility could be improved to increase detection and thus avoidance by birds. The analysis focused on the color scheme of aircraft and looked for a correlation between bird strikes. An estimation linked strike rates to airlines with different fuselage colors, while also controlling aircraft type. An analysis of variance test (ANOVA) was used to complete the study. The study compared the bird strike rates in airlines with different color schemes. It was found that aircraft with bright colored fuselages had lower bird-strike rates. Thus, the study concluded that a brighter fuselage could increase contrast between the sky and aircraft, enabling aircraft to be more easily seen by birds. [5]
+
+<br>
+
+|          In 2019, Dr. Meer Ahmad compiled previous research with the goal of finding new solutions to the bird strike problem. The same types of outcomes were studied like in the previous research: bird species, climate conditions, phase of flight, type of aircraft, etc. There was no statistical approach noted. Ahmad identified habits of birds that are relevant to bird strikes, such are their behaviors and nesting techniques. Dr. Ahmad then concluded with recommendations to lessen the chance of a bird strike. [6]
+
+<br>
+
+|          In 2020, a study was performed with an aim to find a correlation between bird migration movements and aircraft strikes. Additionally, they sought to find proactive measures to reduce the bird strikes. The analysis was conducted using linear regression by correlating the mean number of strikes with with a calculated mean migration intensity for 5 day periods throughout a year. The analysis concluded that the bird type probability of occurrence in each region, along with the birds mass and flight behavior, were critical predictors to damaging bird strikes. [7]

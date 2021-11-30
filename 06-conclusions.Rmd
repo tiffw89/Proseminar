@@ -1,0 +1,13 @@
+# Conclusions 
+
+|         The goal for this project was to conduct a statistical analysis on aviation wildlife mishaps, specifically focusing on bird strikes. In addition, this project taught the value of utilizing R markdown to analyze and display data as well as publishing it by way of R bookdown. It was also very meaningful to learn the different types and techniques of logistic regression.
+
+
+
+## Summary: Interpretation
+
+|         Through this analysis, the following predictors were found to be statistically significant by contributing to damage: size of bird, warning indication, bird ingestion, time of day, & sky conditions
+
+##  Limitations 
+
+|         There were several limitations pertaining to this project. While there was strike data available for all of North America, data was restricted to the United States for this project. This project also limited data to birds only, no other wildlife. And while there were variable descriptions available, they were not entirely clear, thus further research was required to fully comprehend their meanings. Additionally, proper access had to be obtained to read some of the previous research, as it was not widely available. While reporting strikes to the FAA is mandatory, it's reasonable to assume that some do not get reported. We also cannot account for the total number of flights due to not having non-strike data.
