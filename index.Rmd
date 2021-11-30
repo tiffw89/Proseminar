@@ -1,6 +1,6 @@
 --- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAME HERE"
+title: "A statistical Analysis of Aviation Wildlife Mishaps"
+author: "Tiffany Waller"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
