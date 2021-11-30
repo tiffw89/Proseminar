@@ -36,3 +36,4 @@ adjusted-associations-damage-level
 adjusted-associations-odds-ratios-1
 adjusted-associations-multiple-regression-damage-level
 adjusted-associations-model-damage-level
+adjusted-associations-model-damage-level-time-of-day-ingested-size-warned-sky

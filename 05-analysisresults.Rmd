@@ -369,9 +369,9 @@ c1 <- round(exp(cbind(OR = coef(m5), ci)),3)
 
 | Predictor | Odds Ratios | (95% CI)  |  *p*-value |
 |---|---|---|---|
-| TIME OF DAY: Day | `r c1[1]` | (`r c1[10]`,`r c1[19]`)  | < 0.001 |
-| TIME OF DAY: Dusk | `r c1[2]`| (`r c1[11]`,`r c1[20]`) |  < 0.001 |
-| TIME OF DAY: Night | `r c1[3]` | (`r c1[12]`,`r c1[21]`) |  < 0.001  |
+| Time of Day: Day | `r c1[1]` | (`r c1[10]`,`r c1[19]`)  | < 0.001 |
+| Time of Day: Dusk | `r c1[2]`| (`r c1[11]`,`r c1[20]`) |  < 0.001 |
+| Time of Day: Night | `r c1[3]` | (`r c1[12]`,`r c1[21]`) |  < 0.001  |
 | Ingested: Yes | `r c1[4]` | (`r c1[13]`,`r c1[22]`)  |  < 0.001  |
 | Size: Small  |  `r c1[6]` | (`r c1[15]`,`r c1[23]`)  |  < 0.001  |
 | Size: Medium |  `r c1[5]` | (`r c1[14]`,`r c1[24]`)  | < 0.001   |
