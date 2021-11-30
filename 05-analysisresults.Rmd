@@ -57,9 +57,9 @@ c3 <- c3 %>% rename(lb = `2.5 %`,
                     ub = `97.5 %`)
 ```
 
-### INDICATED DAMAGE
+## INDICATED DAMAGE
 
-#### Unadjusted Associations
+### Unadjusted Associations
 
 The estimated models can be written as:
 
@@ -69,7 +69,7 @@ The estimated models can be written as:
 
 \[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm3))[,1][1], 2)` + `r round(coef(summary(glm3))[,1][2], 2)` \text{Ingested} \]
 
-#### Undjusted associations: Odds Ratios
+### Undjusted associations: Odds Ratios
 
 | Predictor | Odds Ratios | (95% CI)  |  *p*-value |
 |---|---|---|---|
@@ -85,7 +85,7 @@ Small birds' odds of damaging the aircraft are `r o1$value[3]` times that of lar
 
 <br>
 
-#### Adjusted associations: Indicated Damage ~ Size + Warned + Ingested
+### Adjusted associations: Indicated Damage ~ Size + Warned + Ingested
 
 ```{r, include=FALSE}
 strike.reports <- read.csv("C:/Users/crack/Desktop/Proseminar/strike reports.csv")
@@ -110,7 +110,7 @@ The estimated model can be written as:
 
 \[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm11))[,1][1], 2)`  `r round(coef(summary(glm11))[,1][3], 2)` {\text{Small}} `r round(coef(summary(glm11))[,1][2], 2)` {\text{Medium}} `r round(coef(summary(glm11))[,1][4], 2)` \text{Warned} + `r round(coef(summary(glm11))[,1][5], 2)` \text{Ingested} \]
 
-#### Adjusted associations: Odds Ratios
+### Adjusted associations: Odds Ratios
 
 | Predictor | Odds Ratios | (95% CI)  |  *p*-value |
 |---|---|---|---|
@@ -241,9 +241,9 @@ c16 <- round(exp(cbind(OR = coef(m6), t(ci))),3)
 o6 <- as_tibble(round(exp(coef(summary(m6))[,1]),3))
 ```
 
-### DAMAGE LEVEL
+## DAMAGE LEVEL
 
-#### Undjusted associations: Damage Level
+### Undjusted associations: Damage Level
 
 The estimated models can be written as:
 
@@ -282,7 +282,7 @@ The estimated models can be written as:
 |Logit$\hat{P}(Y \le 3)$|`r round(ctable3[4],2)`|`r round(ctable2[1],2)`|
 |Logit$\hat{P}(Y \le 4)$|`r round(ctable3[5],2)`|`r round(ctable2[1],2)`|
 
-#### Undjusted associations: Odds Ratios
+### Undjusted associations: Odds Ratios
 
 | Predictor | Odds Ratios | (95% CI)  |  *p*-value |
 |---|---|---|---|
@@ -331,7 +331,7 @@ c1 <- round(exp(cbind(OR = coef(m5), ci)),3)
 
 ```
 
-#### Adjusted Associations Model: Damage Level ~ Time of Day + Ingested + Size + Warned + Sky
+### Adjusted Associations Model: Damage Level ~ Time of Day + Ingested + Size + Warned + Sky
 
 | Intercept | Day | Dusk | Night | Ingested | Small | Medium | Warned | Overcast | Some Clouds |
 |---|---|---|---|---|---|---|---|---|
@@ -365,7 +365,7 @@ c1 <- round(exp(cbind(OR = coef(m5), ci)),3)
 
 ```
 
-#### Adjusted associations: Odds Ratios 
+### Adjusted associations: Odds Ratios 
 
 | Predictor | Odds Ratios | (95% CI)  |  *p*-value |
 |---|---|---|---|
@@ -379,7 +379,7 @@ c1 <- round(exp(cbind(OR = coef(m5), ci)),3)
 | Sky: Overcast | `r c1[8]` | (`r c1[17]`,`r c1[26]`) | < 0.05 |
 | Sky: Some Clouds | `r c1[9]` | (`r c1[18]`,`r c1[27]`) |  < 0.001  |
 
-#### Adjusted associations:  Damage Level
+### Adjusted associations:  Damage Level
 
 ```{r, include=FALSE}
 strike.reports <- read.csv("C:/Users/crack/Desktop/Proseminar/strike reports.csv")
