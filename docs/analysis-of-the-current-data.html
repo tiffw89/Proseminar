@@ -21,10 +21,8 @@
   
   
 
-<meta name="author" content="Tiffany Waller" />
 
 
-<meta name="date" content="2021-11-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -98,7 +96,11 @@
 </ul></li>
 <li class="chapter" data-level="3" data-path="analysis-of-the-current-data.html"><a href="analysis-of-the-current-data.html"><i class="fa fa-check"></i><b>3</b> Analysis of the Current Data</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="analysis-of-the-current-data.html"><a href="analysis-of-the-current-data.html#analysis-results"><i class="fa fa-check"></i><b>3.1</b> Analysis Results</a></li>
+<li class="chapter" data-level="3.1" data-path="analysis-of-the-current-data.html"><a href="analysis-of-the-current-data.html#analysis-results"><i class="fa fa-check"></i><b>3.1</b> Analysis Results</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="analysis-of-the-current-data.html"><a href="analysis-of-the-current-data.html#indicated-damage"><i class="fa fa-check"></i><b>3.1.1</b> INDICATED DAMAGE</a></li>
+<li class="chapter" data-level="3.1.2" data-path="analysis-of-the-current-data.html"><a href="analysis-of-the-current-data.html#damage-level"><i class="fa fa-check"></i><b>3.1.2</b> DAMAGE LEVEL</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>4</b> Conclusions</a>
 <ul>
@@ -127,23 +129,29 @@
             <section class="normal" id="section-">
 <div id="analysis-of-the-current-data" class="section level1" number="3">
 <h1><span class="header-section-number">Chapter 3</span> Analysis of the Current Data</h1>
-<div class="line-block">      With this particular set of data, ordinary linear regression was not appropriate. In addition, all of the outcome variables in this set are categorical (nominal, ordinal), not continuous. Therefore, the most appropriate type of analysis is logistic regression, since logistic regression estimates the probability of a categorical response. The bird strike data was analyzed with both binary and ordinal logistic regression. Outcomes of interest include: Indicated Damage and Damage Level. Indicated damage was analyzed using binary logistic regression while damage level was analyzed using ordinary logistic regression. Predictors of interest include: size of bird, sky conditions, warning indication, time of day, and engine ingestion.</div>
-<p>Results are shown as the odds ratio with its 95% confidence interval. Both unadjusted and adjusted analyses were conducted. Statistical significance was defined  as <span class="math inline">\(p&lt;0.05\)</span>.</p>
+<div class="line-block">      With this particular set of data, ordinary linear regression was not appropriate. In addition, all of the outcome variables in this set are categorical (nominal, ordinal), not continuous. Therefore, the most appropriate type of analysis is logistic regression, since logistic regression estimates the probability of a categorical response. The bird strike data was analyzed with both binary and ordinal logistic regression. Outcomes of interest include: Indicated Damage and Damage Level. Indicated damage was analyzed using binary logistic regression while damage level was analyzed using ordinary logistic regression. Predictors of interest include: size of bird, sky conditions, warning indication, time of day, and engine ingestion. Results are shown as the odds ratio with its 95% confidence interval. Both unadjusted and adjusted analyses were conducted. Statistical significance was defined  as <span class="math inline">\(p&lt;0.05\)</span>.</div>
 <div id="analysis-results" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Analysis Results</h2>
-<p>###INDICATED DAMAGE###</p>
-<p><em>Unadjusted associations</em></p>
+<div id="indicated-damage" class="section level3" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> INDICATED DAMAGE</h3>
+<div id="unadjusted-associations" class="section level4" number="3.1.1.1">
+<h4><span class="header-section-number">3.1.1.1</span> Unadjusted Associations</h4>
 <p>The estimated models can be written as:</p>
-<p><span class="math display">\[ \text{logit} \left({\pi} \right) = -0.62  -3.16 \text{Small} -1.26 \text{Medium}\]</span></p>
-<p><span class="math display">\[ \text{logit} \left({\pi} \right) = -1.98  -0.48 \text{Warned} \]</span></p>
-<p><span class="math display">\[ \text{logit} \left({\pi} \right) = -2.77 + 2.27 \text{Ingested} \]</span></p>
+<ul>
+<li><p><span class="math display">\[ \text{logit} \left({\pi} \right) = -0.62  -3.16 \text{Small} -1.26 \text{Medium}\]</span></p></li>
+<li><p><span class="math display">\[ \text{logit} \left({\pi} \right) = -1.98  -0.48 \text{Warned} \]</span></p></li>
+<li><p><span class="math display">\[ \text{logit} \left({\pi} \right) = -2.77 + 2.27 \text{Ingested} \]</span></p></li>
+</ul>
+</div>
+<div id="undjusted-associations-odds-ratios" class="section level4" number="3.1.1.2">
+<h4><span class="header-section-number">3.1.1.2</span> Undjusted associations: Odds Ratios</h4>
 <table>
 <thead>
 <tr class="header">
 <th>Predictor</th>
-<th>Odds Ratios (95% CI)</th>
+<th>Odds Ratios</th>
+<th>(95% CI)</th>
 <th><em>p</em>-value</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
@@ -193,8 +201,16 @@
 </table>
 <p>Small birds’ odds of damaging the aircraft are 0.043 times that of large birds. Medium birds’ odds of damaging the aircraft are 0.282 times that of large birds. The odds of damaging the aircraft when the pilot is warned are 0.617 times that of not being warned. The odds of damaging the aircraft when a bird is ingested are 9.688 times that of not being ingested.</p>
 <p><br></p>
-<p><em>Adjusted associations: Indicated Damage ~ Size + Warned + Ingested</em></p>
-<p><span class="math display">\[ \text{logit} \left({\pi} \right) = -0.21  -3.18 {\text{Small}} -1.42 {\text{Medium}} -0.43 \text{Warned} + 2.14 \text{Ingested} \]</span></p>
+</div>
+<div id="adjusted-associations-indicated-damage-size-warned-ingested" class="section level4" number="3.1.1.3">
+<h4><span class="header-section-number">3.1.1.3</span> Adjusted associations: Indicated Damage ~ Size + Warned + Ingested*</h4>
+<p>The estimated model can be written as:</p>
+<ul>
+<li><span class="math display">\[ \text{logit} \left({\pi} \right) = -0.21  -3.18 {\text{Small}} -1.42 {\text{Medium}} -0.43 \text{Warned} + 2.14 \text{Ingested} \]</span></li>
+</ul>
+</div>
+<div id="adjusted-associations-odds-ratios" class="section level4" number="3.1.1.4">
+<h4><span class="header-section-number">3.1.1.4</span> Adjusted associations: Odds Ratios</h4>
 <table>
 <thead>
 <tr class="header">
@@ -250,30 +266,191 @@
 </tbody>
 </table>
 <p>Small birds’ odds of damaging the aircraft are 0.042 times that of large birds. Medium birds’ odds of damaging the aircraft are 0.242 times that of large birds. The odds of damaging the aircraft when the pilot is warned are 0.648 times that of not being warned. The odds of damaging the aircraft when a bird is ingested are 8.517 times that of not being ingested.</p>
-<p>###DAMAGE LEVEL###</p>
-<p><em>Undjusted associations: Damage Level</em></p>
+</div>
+</div>
+<div id="damage-level" class="section level3" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> DAMAGE LEVEL</h3>
+<div id="undjusted-associations-damage-level" class="section level4" number="3.1.2.1">
+<h4><span class="header-section-number">3.1.2.1</span> Undjusted associations: Damage Level*</h4>
 <p>The estimated models can be written as:</p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 1) = -2.33 1.01\text{Day} -7.64\text{Dusk} -2.85\text{Night}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 2) = 3.75 1.01\text{Day} -7.64\text{Dusk} -2.85\text{Night}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 3) = 0.04 1.01\text{Day} -7.64\text{Dusk} -2.85\text{Night}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 4) = 0.12 1.01\text{Day} -7.64\text{Dusk} -2.85\text{Night}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 1) = -2.85 + 1.01\text{Overcast} + -7.64\text{SomeClouds}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 2) = -2.33 + 1.01\text{Overcast} + -7.64\text{SomeClouds}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 3) = 3.75 + 1.01\text{Overcast} + -7.64\text{SomeClouds}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 4) = 0.04 + 1.01\text{Overcast} + -7.64\text{SomeClouds}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 1) = -2.85 + -7.64\text{Small} + 1.01\text{Medium}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 2) = -2.33 + -7.64\text{Small} + 1.01\text{Medium}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 3) = 3.75 + -7.64\text{Small} + 1.01\text{Medium}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 4) = 0.04 + -7.64\text{Small} + 1.01\text{Medium}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 1) = -7.64 + 1.01\text{Warned}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 2) = -2.85 + 1.01\text{Warned}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 3) = -2.33 + 1.01\text{Warned}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 4) = 3.75 + 1.01\text{Warned}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 1) = -7.64 + 1.01\text{Ingested}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 2) = -2.85 + 1.01\text{Ingested}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 3) = -2.33 + 1.01\text{Ingested}\)</span></p>
-<p><span class="math inline">\({\sf Logit}\hat{P}(Y \le 4) = 3.75 + 1.01\text{Ingested}\)</span></p>
-<p><em>Undjusted associations: Damage Level</em></p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\({\sf Logit}\hat{P}(Y \le j)\)</span></th>
+<th>Intercept</th>
+<th>Day</th>
+<th>Dusk</th>
+<th>Night</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 1)\)</span></td>
+<td>-7.67</td>
+<td>-0.11</td>
+<td>-0.22</td>
+<td>-0.22</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 2)\)</span></td>
+<td>-3.02</td>
+<td>-0.11</td>
+<td>-0.22</td>
+<td>-0.22</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 3)\)</span></td>
+<td>-2.49</td>
+<td>-0.11</td>
+<td>-0.22</td>
+<td>-0.22</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 4)\)</span></td>
+<td>3.48</td>
+<td>-0.11</td>
+<td>-0.22</td>
+<td>-0.22</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\({\sf Logit}\hat{P}(Y \le j)\)</span></th>
+<th>Intercept</th>
+<th>Overcast</th>
+<th>SomeClouds</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 1)\)</span></td>
+<td>-7.8</td>
+<td>0.06</td>
+<td>0.06</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 2)\)</span></td>
+<td>-2.86</td>
+<td>0.06</td>
+<td>0.06</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 3)\)</span></td>
+<td>-2.31</td>
+<td>0.06</td>
+<td>0.06</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 4)\)</span></td>
+<td>3.68</td>
+<td>0.06</td>
+<td>0.06</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\({\sf Logit}\hat{P}(Y \le j)\)</span></th>
+<th>Intercept</th>
+<th>Small</th>
+<th>Medium</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 1)\)</span></td>
+<td>-6.45</td>
+<td>1.67</td>
+<td>0.98</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 2)\)</span></td>
+<td>-1.64</td>
+<td>1.67</td>
+<td>0.98</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 3)\)</span></td>
+<td>-1.1</td>
+<td>1.67</td>
+<td>0.98</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 4)\)</span></td>
+<td>5.02</td>
+<td>1.67</td>
+<td>0.98</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\({\sf Logit}\hat{P}(Y \le j)\)</span></th>
+<th>Intercept</th>
+<th>Warned</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 1)\)</span></td>
+<td>-8.49</td>
+<td>0.21</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 2)\)</span></td>
+<td>-2.8</td>
+<td>0.21</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 3)\)</span></td>
+<td>-2.25</td>
+<td>0.21</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 4)\)</span></td>
+<td>3.81</td>
+<td>0.21</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\({\sf Logit}\hat{P}(Y \le j)\)</span></th>
+<th>Intercept</th>
+<th>Ingested</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 1)\)</span></td>
+<td>-7.64</td>
+<td>0.06</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 2)\)</span></td>
+<td>-2.85</td>
+<td>0.06</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 3)\)</span></td>
+<td>-2.33</td>
+<td>0.06</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\({\sf Logit}\hat{P}(Y \le 4)\)</span></td>
+<td>3.75</td>
+<td>0.06</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="undjusted-associations-odds-ratios-1" class="section level4" number="3.1.2.2">
+<h4><span class="header-section-number">3.1.2.2</span> Undjusted associations: Odds Ratios</h4>
 <table>
 <thead>
 <tr class="header">
@@ -372,7 +549,73 @@
 </table>
 <p>The odds of damaging the aircraft during the day are 0.893 times that of during dawn. The odds of damaging the aircraft during dusk are 0.799 times that of during dawn. The odds of damaging the aircraft during the night are 0.801 times that of during dawn. The odds of damaging the aircraft with overcast skies are 1.065 times that of no clouds. The odds of damaging the aircraft with some clouds in the sky are 0.799 times that of no clouds. Small birds’ odds of damaging the aircraft are 2.652 times that of large birds. Medium birds’ odds of damaging the aircraft are 5.326 times that of large birds. The odds of damaging the aircraft when the pilot is warned are 1.239 times that of not being warned. The odds of damaging the aircraft when a bird is ingested are 2.743 times that of not being ingested.</p>
 <p><br></p>
-<p><em>Adjusted associations: Damage Level</em></p>
+</div>
+<div id="adjusted-associations-damage-level" class="section level4" number="3.1.2.3">
+<h4><span class="header-section-number">3.1.2.3</span> Adjusted associations: Damage Level</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Intercept</th>
+<th>Day</th>
+<th>Dusk</th>
+<th>Night</th>
+<th>Ingested</th>
+<th>Small</th>
+<th>Medium</th>
+<th>Warned</th>
+<th>Overcast</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>-7.25</td>
+<td>-0.17</td>
+<td>-0.14</td>
+<td>-0.12</td>
+<td>1.25</td>
+<td>0.88</td>
+<td>1.81</td>
+<td>0.14</td>
+<td>0.09</td>
+</tr>
+<tr class="even">
+<td>-1.6</td>
+<td>-0.17</td>
+<td>-0.14</td>
+<td>-0.12</td>
+<td>1.25</td>
+<td>0.88</td>
+<td>1.81</td>
+<td>0.14</td>
+<td>0.09</td>
+</tr>
+<tr class="odd">
+<td>-1.04</td>
+<td>-0.17</td>
+<td>-0.14</td>
+<td>-0.12</td>
+<td>1.25</td>
+<td>0.88</td>
+<td>1.81</td>
+<td>0.14</td>
+<td>0.09</td>
+</tr>
+<tr class="even">
+<td>5.24</td>
+<td>-0.17</td>
+<td>-0.14</td>
+<td>-0.12</td>
+<td>1.25</td>
+<td>0.88</td>
+<td>1.81</td>
+<td>0.14</td>
+<td>0.09</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="adjusted-associations-odds-ratios-1" class="section level4" number="3.1.2.4">
+<h4><span class="header-section-number">3.1.2.4</span> Adjusted associations: Odds Ratios</h4>
 <table>
 <thead>
 <tr class="header">
@@ -439,71 +682,13 @@
 </tr>
 </tbody>
 </table>
-<p><em>Multiple Regression Model: Damage Level</em></p>
-<table>
-<thead>
-<tr class="header">
-<th>Intercept</th>
-<th>Day</th>
-<th>Dusk</th>
-<th>Night</th>
-<th>Ingested</th>
-<th>Small</th>
-<th>Medium</th>
-<th>Warned</th>
-<th>Overcast</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>-7.25</td>
-<td>-0.17</td>
-<td>-0.14</td>
-<td>-0.12</td>
-<td>1.25</td>
-<td>0.88</td>
-<td>1.81</td>
-<td>0.14</td>
-<td>0.09</td>
-</tr>
-<tr class="even">
-<td>-1.6</td>
-<td>-0.17</td>
-<td>-0.14</td>
-<td>-0.12</td>
-<td>1.25</td>
-<td>0.88</td>
-<td>1.81</td>
-<td>0.14</td>
-<td>0.09</td>
-</tr>
-<tr class="odd">
-<td>-1.04</td>
-<td>-0.17</td>
-<td>-0.14</td>
-<td>-0.12</td>
-<td>1.25</td>
-<td>0.88</td>
-<td>1.81</td>
-<td>0.14</td>
-<td>0.09</td>
-</tr>
-<tr class="even">
-<td>5.24</td>
-<td>-0.17</td>
-<td>-0.14</td>
-<td>-0.12</td>
-<td>1.25</td>
-<td>0.88</td>
-<td>1.81</td>
-<td>0.14</td>
-<td>0.09</td>
-</tr>
-</tbody>
-</table>
-<p><em>Interpretation: Multiple Regression: Damage Level</em></p>
+</div>
+<div id="adjusted-associations-multiple-regression-damage-level" class="section level4" number="3.1.2.5">
+<h4><span class="header-section-number">3.1.2.5</span> Adjusted associations: Multiple Regression: Damage Level*</h4>
 <p>The odds of damaging the aircraft during the day are 0.844 times that of during dawn. The odds of damaging the aircraft during dusk are 0.867 times that of during dawn. The odds of damaging the aircraft during the night are 0.887 times that of during dawn. The odds of damaging the aircraft when a bird is ingested are 3.489 times that of not being not being ingested. Small birds’ odds of damaging the aircraft are 6.105 times that of large birds. Medium birds’ odds of damaging the aircraft are 2.404 times that of large birds. The odds of damaging the aircraft when the pilot is warned are 1.147 times that of not being warned. The odds of damaging the aircraft with overcast skies are 1.092 times that of no clouds. The odds of damaging the aircraft with some clouds in the sky are 1.052 times that of no clouds.</p>
 
+</div>
+</div>
 </div>
 </div>
             </section>

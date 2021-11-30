@@ -225,3 +225,6 @@ Odds ratios are interpreted slightly different than what we saw in binary logist
 
 \[ \hat{\beta}_i \pm Z_{1-\alpha/2} \text{SE}_{\hat{\beta}_i} \]
 
+## Analysis of the Current Data 
+
+|       With this particular set of data, ordinary linear regression was not appropriate. In addition, all of the outcome variables in this set are categorical (nominal, ordinal), not continuous. Therefore, the most appropriate type of analysis is logistic regression, since logistic regression estimates the probability of a categorical response. The bird strike data was analyzed with both binary and ordinal logistic regression. Outcomes of interest include: Indicated Damage and Damage Level. Indicated damage was analyzed using binary logistic regression while damage level was analyzed using ordinary logistic regression. Predictors of interest include: size of bird, sky conditions, warning indication, time of day, and engine ingestion. Results are shown as the odds ratio with its 95% confidence interval. Both unadjusted and adjusted analyses were conducted. Statistical significance was defined \textit{a priori} as $p<0.05$.

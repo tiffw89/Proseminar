@@ -24,3 +24,14 @@ analysis-results
 conclusions
 summary-interpretation
 limitations
+indicated-damage
+unadjusted-associations
+undjusted-associations-odds-ratios
+adjusted-associations-indicated-damage-size-warned-ingested
+adjusted-associations-odds-ratios
+damage-level
+undjusted-associations-damage-level
+undjusted-associations-odds-ratios-1
+adjusted-associations-damage-level
+adjusted-associations-odds-ratios-1
+adjusted-associations-multiple-regression-damage-level
