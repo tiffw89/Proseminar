@@ -243,7 +243,7 @@ o6 <- as_tibble(round(exp(coef(summary(m6))[,1]),3))
 
 ### DAMAGE LEVEL
 
-#### Undjusted associations: Damage Level*
+#### Undjusted associations: Damage Level
 
 The estimated models can be written as:
 
@@ -379,7 +379,7 @@ c1 <- round(exp(cbind(OR = coef(m5), ci)),3)
 | Sky: Overcast | `r c1[8]` | (`r c1[17]`,`r c1[26]`) | < 0.05 |
 | Sky: Some Clouds | `r c1[9]` | (`r c1[18]`,`r c1[27]`) |  < 0.001  |
 
-#### Adjusted associations:  Damage Level*
+#### Adjusted associations:  Damage Level
 
 ```{r, include=FALSE}
 strike.reports <- read.csv("C:/Users/crack/Desktop/Proseminar/strike reports.csv")
