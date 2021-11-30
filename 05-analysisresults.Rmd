@@ -305,7 +305,7 @@ The odds of damaging the aircraft during the day are `r c5[1]` times that of dur
 
 <br>
 
-#### Adjusted Associations Model: Damage Level
+
 
 ```{r, include=FALSE}
 strike.reports <- read.csv("C:/Users/crack/Desktop/Proseminar/strike reports.csv")
@@ -331,6 +331,7 @@ c1 <- round(exp(cbind(OR = coef(m5), ci)),3)
 
 ```
 
+#### Adjusted Associations Model: Damage Level ~ Time of Day + Ingested + Size + Warned + Sky
 
 | Intercept | Day | Dusk | Night | Ingested | Small | Medium | Warned | Overcast | Some Clouds |
 |---|---|---|---|---|---|---|---|---|
