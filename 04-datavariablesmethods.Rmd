@@ -152,11 +152,11 @@ Binary logistic regression is appropriate for categorical outcomes with only two
 
 - Hypotheses testing can then be accomplished for the odds ratio:
 
-\[ H_0:{\text{OR}}_i = {\text{OR}}_i^{(0)} | OR_i≥ {\text{OR}}_i^{(0)}|OR_i≤{\text{OR}}_i^{(0)} \]
+\[ H_0:{\beta}_i = {\beta}_i^{(0)} | {\beta}_i≥ {\beta}_i^{(0)}|{\beta}_i≤{\beta}_i^{(0)} \]
 
-\[ H_1:{\text{OR}}_i = {\text{OR}}_i^{(0)} | OR_i≥ {\text{OR}}_i^{(0)}|OR_i≤{\text{OR}}_i^{(0)} \]
+\[ H_1:{\beta}_i = {\beta}_i^{(0)} | {\beta}_i≥ {\beta}_i^{(0)}|{\beta}_i≤{\beta}_i^{(0)} \]
 
-- The test statistic is defined by the following equation: \[ z_0 = \frac{ \hat{\beta}_i-\text{ln}{\text{(OR)}_i^{(0)}}}{\text{SE}_{\hat{\beta}_i}} \]
+- The test statistic is defined by the following equation: \[ z_0 = \frac{ \hat{\beta}_i-{\beta}_i^{(0)}}{\text{SE}_{\hat{\beta}_i}} \]
 
   - $\hat\beta_i$ is the slope of the sample regression line
 
@@ -211,11 +211,11 @@ Odds ratios are interpreted slightly different than what we saw in binary logist
 
 - Hypotheses testing can then be accomplished for the odds ratio:
 
-\[ H_0:{\text{OR}}_i = {\text{OR}}_i^{(0)} | OR_i≥ {\text{OR}}_i^{(0)}|OR_i≤{\text{OR}}_i^{(0)} \]
+\[ H_0:{\beta}_i = {\beta}_i^{(0)} | {\beta}_i≥ {\beta}_i^{(0)}|{\beta}_i≤{\beta}_i^{(0)} \]
 
-\[ H_1:{\text{OR}}_i = {\text{OR}}_i^{(0)} | OR_i≥ {\text{OR}}_i^{(0)}|OR_i≤{\text{OR}}_i^{(0)} \]
+\[ H_1:{\beta}_i = {\beta}_i^{(0)} | {\beta}_i≥ {\beta}_i^{(0)}|{\beta}_i≤{\beta}_i^{(0)} \]
 
-- The test statistic is defined by the following equation: \[ z_0 = \frac{ \hat{\beta}_i-\text{ln}{\text{(OR)}_i^{(0)}}}{\text{SE}_{\hat{\beta}_i}} \]
+- The test statistic is defined by the following equation: \[ z_0 = \frac{ \hat{\beta}_i-{\beta}_i^{(0)}}{\text{SE}_{\hat{\beta}_i}} \]
 
   - $\hat\beta_i$ is the slope of the sample regression line
 

@@ -35,3 +35,4 @@ undjusted-associations-odds-ratios-1
 adjusted-associations-damage-level
 adjusted-associations-odds-ratios-1
 adjusted-associations-multiple-regression-damage-level
+adjusted-associations-model-damage-level

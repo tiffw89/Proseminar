@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="introduction.html"/>
-<link rel="next" href="analysis-of-the-current-data.html"/>
+<link rel="next" href="analysis-results.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -93,14 +93,12 @@
 <li class="chapter" data-level="2.2.1" data-path="methods.html"><a href="methods.html#linear-regression"><i class="fa fa-check"></i><b>2.2.1</b> Linear Regression</a></li>
 <li class="chapter" data-level="2.2.2" data-path="methods.html"><a href="methods.html#logistic-regression"><i class="fa fa-check"></i><b>2.2.2</b> Logistic Regression</a></li>
 </ul></li>
+<li class="chapter" data-level="2.3" data-path="methods.html"><a href="methods.html#analysis-of-the-current-data"><i class="fa fa-check"></i><b>2.3</b> Analysis of the Current Data</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="analysis-of-the-current-data.html"><a href="analysis-of-the-current-data.html"><i class="fa fa-check"></i><b>3</b> Analysis of the Current Data</a>
+<li class="chapter" data-level="3" data-path="analysis-results.html"><a href="analysis-results.html"><i class="fa fa-check"></i><b>3</b> Analysis Results</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="analysis-of-the-current-data.html"><a href="analysis-of-the-current-data.html#analysis-results"><i class="fa fa-check"></i><b>3.1</b> Analysis Results</a>
-<ul>
-<li class="chapter" data-level="3.1.1" data-path="analysis-of-the-current-data.html"><a href="analysis-of-the-current-data.html#indicated-damage"><i class="fa fa-check"></i><b>3.1.1</b> INDICATED DAMAGE</a></li>
-<li class="chapter" data-level="3.1.2" data-path="analysis-of-the-current-data.html"><a href="analysis-of-the-current-data.html#damage-level"><i class="fa fa-check"></i><b>3.1.2</b> DAMAGE LEVEL</a></li>
-</ul></li>
+<li class="chapter" data-level="3.0.1" data-path="analysis-results.html"><a href="analysis-results.html#indicated-damage"><i class="fa fa-check"></i><b>3.0.1</b> INDICATED DAMAGE</a></li>
+<li class="chapter" data-level="3.0.2" data-path="analysis-results.html"><a href="analysis-results.html#damage-level"><i class="fa fa-check"></i><b>3.0.2</b> DAMAGE LEVEL</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>4</b> Conclusions</a>
 <ul>
@@ -266,10 +264,10 @@
 <ul>
 <li>Hypotheses testing can then be accomplished for the odds ratio:</li>
 </ul>
-<p><span class="math display">\[ H_0:{\text{OR}}_i = {\text{OR}}_i^{(0)} | OR_i≥ {\text{OR}}_i^{(0)}|OR_i≤{\text{OR}}_i^{(0)} \]</span></p>
-<p><span class="math display">\[ H_1:{\text{OR}}_i = {\text{OR}}_i^{(0)} | OR_i≥ {\text{OR}}_i^{(0)}|OR_i≤{\text{OR}}_i^{(0)} \]</span></p>
+<p><span class="math display">\[ H_0:{\beta}_i = {\beta}_i^{(0)} | {\beta}_i≥ {\beta}_i^{(0)}|{\beta}_i≤{\beta}_i^{(0)} \]</span></p>
+<p><span class="math display">\[ H_1:{\beta}_i = {\beta}_i^{(0)} | {\beta}_i≥ {\beta}_i^{(0)}|{\beta}_i≤{\beta}_i^{(0)} \]</span></p>
 <ul>
-<li><p>The test statistic is defined by the following equation: <span class="math display">\[ z_0 = \frac{ \hat{\beta}_i-\text{ln}{\text{(OR)}_i^{(0)}}}{\text{SE}_{\hat{\beta}_i}} \]</span></p>
+<li><p>The test statistic is defined by the following equation: <span class="math display">\[ z_0 = \frac{ \hat{\beta}_i-{\beta}_i^{(0)}}{\text{SE}_{\hat{\beta}_i}} \]</span></p>
 <ul>
 <li><p><span class="math inline">\(\hat\beta_i\)</span> is the slope of the sample regression line</p></li>
 <li><p><span class="math inline">\(\text{SE}_{\hat\beta_i}\)</span> is the standard error of the slope</p></li>
@@ -311,10 +309,10 @@
 <ul>
 <li>Hypotheses testing can then be accomplished for the odds ratio:</li>
 </ul>
-<p><span class="math display">\[ H_0:{\text{OR}}_i = {\text{OR}}_i^{(0)} | OR_i≥ {\text{OR}}_i^{(0)}|OR_i≤{\text{OR}}_i^{(0)} \]</span></p>
-<p><span class="math display">\[ H_1:{\text{OR}}_i = {\text{OR}}_i^{(0)} | OR_i≥ {\text{OR}}_i^{(0)}|OR_i≤{\text{OR}}_i^{(0)} \]</span></p>
+<p><span class="math display">\[ H_0:{\beta}_i = {\beta}_i^{(0)} | {\beta}_i≥ {\beta}_i^{(0)}|{\beta}_i≤{\beta}_i^{(0)} \]</span></p>
+<p><span class="math display">\[ H_1:{\beta}_i = {\beta}_i^{(0)} | {\beta}_i≥ {\beta}_i^{(0)}|{\beta}_i≤{\beta}_i^{(0)} \]</span></p>
 <ul>
-<li><p>The test statistic is defined by the following equation: <span class="math display">\[ z_0 = \frac{ \hat{\beta}_i-\text{ln}{\text{(OR)}_i^{(0)}}}{\text{SE}_{\hat{\beta}_i}} \]</span></p>
+<li><p>The test statistic is defined by the following equation: <span class="math display">\[ z_0 = \frac{ \hat{\beta}_i-{\beta}_i^{(0)}}{\text{SE}_{\hat{\beta}_i}} \]</span></p>
 <ul>
 <li><p><span class="math inline">\(\hat\beta_i\)</span> is the slope of the sample regression line</p></li>
 <li><p><span class="math inline">\(\text{SE}_{\hat\beta_i}\)</span> is the standard error of the slope</p></li>
@@ -322,9 +320,13 @@
 <li><p>We can construct confidence intervals as follows:</p></li>
 </ul>
 <p><span class="math display">\[ \hat{\beta}_i \pm Z_{1-\alpha/2} \text{SE}_{\hat{\beta}_i} \]</span></p>
+</div>
+</div>
+</div>
+<div id="analysis-of-the-current-data" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Analysis of the Current Data</h2>
+<div class="line-block">      With this particular set of data, ordinary linear regression was not appropriate. In addition, all of the outcome variables in this set are categorical (nominal, ordinal), not continuous. Therefore, the most appropriate type of analysis is logistic regression, since logistic regression estimates the probability of a categorical response. The bird strike data was analyzed with both binary and ordinal logistic regression. Outcomes of interest include: Indicated Damage and Damage Level. Indicated damage was analyzed using binary logistic regression while damage level was analyzed using ordinary logistic regression. Predictors of interest include: size of bird, sky conditions, warning indication, time of day, and engine ingestion. Results are shown as the odds ratio with its 95% confidence interval. Both unadjusted and adjusted analyses were conducted. Statistical significance was defined  as <span class="math inline">\(p&lt;0.05\)</span>.</div>
 
-</div>
-</div>
 </div>
 </div>
             </section>
@@ -333,7 +335,7 @@
         </div>
       </div>
 <a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="analysis-of-the-current-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="analysis-results.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
