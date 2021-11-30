@@ -1,5 +1,5 @@
 
-### Edit some key files okay
+### Final stage
 
 - [ ] 1. In `index.Rmd`, change YOUR TITLE HERE to your title. 
 
