@@ -1,5 +1,5 @@
 --- 
-title: "A statistical Analysis of Aviation Wildlife Mishaps"
+title: "A Statistical Analysis of Aviation Wildlife Mishaps"
 site: bookdown::bookdown_site
 ---
 

@@ -4,15 +4,15 @@
 
 2. FAA Wildlife Strike Database. (n.d.). Retrieved July 15, 2021, from https://wildlife.faa.gov/home. 
 
-3. Tedrow, Christine A. Dec. 1998, https://vtechworks.lib.vt.edu/bitstream/handle/10919/40926/tedrow.pdf?sequence=1. 
+3. Tedrow C. (1998). "Bird Strike Risk Assessment for United States Air Force Airfields and Aircraft." [Master's thesis, Virginia Polytechnic Institute and State University]. 
 
-4. Dolbeer, R. A. (2011). Increasing trend of damaging bird strikes with aircraft outside the airport boundary: Implications for mitigation measures. Retrieved October 10, 2021, from https://digitalcommons.usu.edu/hwi/vol5/iss2/12/. 
+4. Dolbeer RA. "Increasing trend of damaging bird strikes with aircraft outside the airport boundary: implications for mitigation measures." Human-Wildlife Interactions, 2011, 5(2), 235–248.
 
-5. Fernandez, E., Gaffney, J., Blackwell, B., & Baumhardt, P. (2011). Bird strikes and aircraft fuselage color: A correlational study. Retrieved November 1, 2021, from https://digitalcommons.usu.edu/cgi/viewcontent.cgi?article=1180&context=hwi. 
+5. Fernandez E, Gaffney J, Blackwell B, & Baumhardt P. "Bird strikes and aircraft fuselage color: a correlational study." Human–Wildlife Interactions, 2011, 5(2):224–234. 
 
-6. Ahmad, M. (2019, February 6). BIRD-STRIKE AIRCRAFT ACCIDENTS AND THEIR PREVENTION. Retrieved October 11, 2021, from https://www.researchgate.net/publication/330900871_BIRD-STRIKE_AIRCRAFT_ACCIDENTS_AND_THEIR_PREVENTION.
+6. Ahmad M. "Bird-strike aircraft accidents and their prevention." Asian Journal of Science and Technology, 2019, 10(01): 9251-9257.
 
-7. Nilsson, C., La Sorte, F., Dokter, A., Horton, K., Van Doren, B., Kolodzinski, J., Shamoun-Baranes, J., & Farnsworth, A. (2021, August 18). Bird strikes at commercial airports explained by citizen science and Weather Radar Data. Retrieved November 1, 2021, from https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2664.13971.
+7. Nilsson C, La Sorte F, Dokter A, Horton K, Van Doren B, Kolodzinski J, Shamoun-Baranes J, & Farnsworth A. "Bird strikes at commercial airports explained by citizen science and Weather Radar Data." Journal of Applied Ecology, 2021, 58(01):2029-2039.
 
 
  

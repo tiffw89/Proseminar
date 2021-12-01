@@ -57,7 +57,7 @@ c3 <- c3 %>% rename(lb = `2.5 %`,
                     ub = `97.5 %`)
 ```
 
-## INDICATED DAMAGE
+## Indicated Damage
 
 ### Unadjusted Associations
 
@@ -69,23 +69,22 @@ The estimated models can be written as:
 
 \[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm3))[,1][1], 2)` + `r round(coef(summary(glm3))[,1][2], 2)` \text{Ingested} \]
 
-### Undjusted associations: Odds Ratios
 
-| Predictor | Odds Ratios | (95% CI)  |  *p*-value |
-|---|---|---|---|
-| Size: Small  | `r o1$value[3]` | (`r c1$lb[3]`, `r c1$ub[3]`)  |  < 0.001  |
-| Size: Medium |  `r o1$value[2]` | (`r c1$lb[2]`, `r c1$ub[2]`)  | < 0.001   |
+| Predictor | Odds Ratios (95% CI)  |  *p*-value |
+|---|---|---|
+| Size: Small  | `r o1$value[3]`  (`r c1$lb[3]`, `r c1$ub[3]`)  |  < 0.001  |
+| Size: Medium |  `r o1$value[2]` (`r c1$lb[2]`, `r c1$ub[2]`)  | < 0.001   |
 | Size: Large | reference | |
-| Warned: Yes  | `r o2$value[2]` | (`r c2$lb[2]`,`r c2$ub[2]`)  |  < 0.001  |
+| Warned: Yes  | `r o2$value[2]`  (`r c2$lb[2]`,`r c2$ub[2]`)  |  < 0.001  |
 | Warned: No | reference | |
-| Ingested: Yes  | `r o3$value[2]` | (`r c3$lb[2]`,`r c3$ub[2]`)  |  < 0.001  |
+| Ingested: Yes  | `r o3$value[2]`  (`r c3$lb[2]`,`r c3$ub[2]`)  |  < 0.001  |
 | Ingested: No | reference | |
 
 Small birds' odds of damaging the aircraft are `r o1$value[3]` times that of large birds. Medium birds' odds of damaging the aircraft are `r o1$value[2]` times that of large birds. The odds of damaging the aircraft when the pilot is warned are `r o2$value[2]` times that of not being warned. The odds of damaging the aircraft when a bird is ingested are `r o3$value[2]` times that of not being ingested.
 
 <br>
 
-### Adjusted associations: Indicated Damage ~ Size + Warned + Ingested
+### Adjusted associations
 
 ```{r, include=FALSE}
 strike.reports <- read.csv("C:/Users/crack/Desktop/Proseminar/strike reports.csv")
@@ -110,16 +109,14 @@ The estimated model can be written as:
 
 \[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm11))[,1][1], 2)`  `r round(coef(summary(glm11))[,1][3], 2)` {\text{Small}} `r round(coef(summary(glm11))[,1][2], 2)` {\text{Medium}} `r round(coef(summary(glm11))[,1][4], 2)` \text{Warned} + `r round(coef(summary(glm11))[,1][5], 2)` \text{Ingested} \]
 
-### Adjusted associations: Odds Ratios
-
-| Predictor | Odds Ratios | (95% CI)  |  *p*-value |
-|---|---|---|---|
-| Size: Small  | `r o11$value[3]` | (`r c1$lb[3]`, `r c1$ub[3]`) |  < 0.001  |
-| Size: Medium |  `r o11$value[2]` | (`r c1$lb[2]`, `r c1$ub[2]`) | < 0.001   |
+| Predictor | Odds Ratios  (95% CI)  |  *p*-value |
+|---|---|---|
+| Size: Small  | `r o11$value[3]` (`r c1$lb[3]`, `r c1$ub[3]`) |  < 0.001  |
+| Size: Medium |  `r o11$value[2]`  (`r c1$lb[2]`, `r c1$ub[2]`) | < 0.001   |
 | Size: Large | reference | |
-| Warned: Yes  | `r o11$value[4]` | (`r c1$lb[4]`, `r c1$ub[4]`) |  < 0.001  |
+| Warned: Yes  | `r o11$value[4]` (`r c1$lb[4]`, `r c1$ub[4]`) |  < 0.001  |
 | Warned: No | reference | |
-| Ingested: Yes  | `r o11$value[5]` | (`r c1$lb[5]`, `r c1$ub[5]`) |  < 0.001  |
+| Ingested: Yes  | `r o11$value[5]` (`r c1$lb[5]`, `r c1$ub[5]`) |  < 0.001  |
 | Ingested: No | reference | |
 
 Small birds' odds of damaging the aircraft are `r o11$value[3]` times that of large birds. Medium birds' odds of damaging the aircraft are `r o11$value[2]` times that of large birds. The odds of damaging the aircraft when the pilot is warned are `r o11$value[4]` times that of not being warned. The odds of damaging the aircraft when a bird is ingested are `r o11$value[5]` times that of not being ingested.
@@ -241,9 +238,9 @@ c16 <- round(exp(cbind(OR = coef(m6), t(ci))),3)
 o6 <- as_tibble(round(exp(coef(summary(m6))[,1]),3))
 ```
 
-## DAMAGE LEVEL
+## Damage Level
 
-### Undjusted associations: Damage Level
+### Undjusted Associations
 
 The estimated models can be written as:
 
@@ -282,23 +279,21 @@ The estimated models can be written as:
 |Logit$\hat{P}(Y \le 3)$|`r round(ctable3[4],2)`|`r round(ctable2[1],2)`|
 |Logit$\hat{P}(Y \le 4)$|`r round(ctable3[5],2)`|`r round(ctable2[1],2)`|
 
-### Undjusted associations: Odds Ratios
-
-| Predictor | Odds Ratios | (95% CI)  |  *p*-value |
-|---|---|---|---|
-| Time of Day: Day | `r c5[1]`, (`r c5[4]`,`r c5[7]`)  | < 0.001 |
-| Time of Day: Dusk | `r c5[2]`, (`r c5[5]`,`r c5[8]`) |  < 0.001 |
-| Time of Day: Night | `r c5[3]`, (`r c5[6]`,`r c5[9]`) |  < 0.001  |
+| Predictor | Odds Ratios  (95% CI)  |  *p*-value |
+|---|---|---|
+| Time of Day: Day | `r c5[1]` (`r c5[4]`,`r c5[7]`)  | < 0.001 |
+| Time of Day: Dusk | `r c5[2]` (`r c5[5]`,`r c5[8]`) |  < 0.001 |
+| Time of Day: Night | `r c5[3]` (`r c5[6]`,`r c5[9]`) |  < 0.001  |
 | Time of Day: Dawn | reference |  |
-| Sky: Overcast | `r c4[1]`, (`r c4[3]`,`r c4[5]`) | < 0.05 |
-| Sky: Some Clouds | `r c4[2]`, (`r c4[4]`,`r c4[6]`) |  < 0.001  |
+| Sky: Overcast | `r c4[1]` (`r c4[3]`,`r c4[5]`) | < 0.05 |
+| Sky: Some Clouds | `r c4[2]` (`r c4[4]`,`r c4[6]`) |  < 0.001  |
 | Sky: No Clouds | reference | |
-| Size: Small  |  `r o8$value[1]`  (`r c8$lb[1]`, `r c8$ub[1]`)  |  < 0.001  |
-| Size: Medium |  `r o8$value[2]`  (`r c8$lb[2]`, `r c8$ub[2]`)  | < 0.001   |
+| Size: Small  |  `r o8$value[1]` (`r c8$lb[1]`, `r c8$ub[1]`)  |  < 0.001  |
+| Size: Medium |  `r o8$value[2]` (`r c8$lb[2]`, `r c8$ub[2]`)  | < 0.001   |
 | Size: Large | reference | |
-| Warned: Yes | `r c6[1]`, (`r c6[2]`,`r c6[3]`)  |  < 0.001  |
+| Warned: Yes | `r c6[1]` (`r c6[2]`,`r c6[3]`)  |  < 0.001  |
 | Warned: No  | reference | |
-| Ingested: Yes | `r c16[1]`, (`r c16[2]`,`r c16[3]`)  |  < 0.001  |
+| Ingested: Yes | `r c16[1]` (`r c16[2]`,`r c16[3]`)  |  < 0.001  |
 | Ingested: No  | reference | |
 
 The odds of damaging the aircraft during the day are `r c5[1]` times that of during dawn. The odds of damaging the aircraft during dusk are `r c5[2]` times that of during dawn. The odds of damaging the aircraft during the night are `r c5[3]` times that of during dawn. The odds of damaging the aircraft with overcast skies are `r c4[1]` times that of no clouds. The odds of damaging the aircraft with some clouds in the sky are `r c5[2]` times that of no clouds. Small birds' odds of damaging the aircraft are  `r o8$value[1]` times that of large birds. Medium birds' odds of damaging the aircraft are `r o8$value[2]` times that of large birds. The odds of damaging the aircraft when the pilot is warned are `r c6[1]` times that of not being warned. The odds of damaging the aircraft when a bird is ingested are `r c16[1]` times that of not being ingested.
@@ -331,7 +326,7 @@ c1 <- round(exp(cbind(OR = coef(m5), ci)),3)
 
 ```
 
-### Adjusted Associations Model: Damage Level ~ Time of Day + Ingested + Size + Warned + Sky
+### Adjusted Associations 
 
 | Intercept | Day | Dusk | Night | Ingested | Small | Medium | Warned | Overcast | Some Clouds |
 |---|---|---|---|---|---|---|---|---|
@@ -340,7 +335,6 @@ c1 <- round(exp(cbind(OR = coef(m5), ci)),3)
 |`r round(ctable1[12],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|`r round(ctable1[4],2)`|`r round(ctable1[5],2)`|`r round(ctable1[6],2)`|`r round(ctable1[7],2)`|`r round(ctable1[8],2)`| `round(ctable1[8],2)`|
 |`r round(ctable1[13],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|`r round(ctable1[4],2)`|`r round(ctable1[5],2)`|`r round(ctable1[6],2)`|`r round(ctable1[7],2)`|`r round(ctable1[8],2)`| `round(ctable1[8],2)`|
 
-
 ```{r, include=FALSE}
 strike.reports <- read.csv("C:/Users/crack/Desktop/Proseminar/strike reports.csv")
 size4 <- strike.reports %>% filter((DAMAGE_LEVEL %in% c('D', 'M', 'M?', 'N', 'S')),(TIME_OF_DAY %in% c('Dawn', 'Day', 'Dusk', 'Night')),(SKY %in% c('No Cloud', 'Overcast', 'Some Cloud')),(SIZE %in% c('Large','Medium','Small')),(WARNED %in% c('No', 'Yes')))
@@ -365,21 +359,17 @@ c1 <- round(exp(cbind(OR = coef(m5), ci)),3)
 
 ```
 
-### Adjusted associations: Odds Ratios 
-
-| Predictor | Odds Ratios | (95% CI)  |  *p*-value |
-|---|---|---|---|
-| Time of Day: Day | `r c1[1]` | (`r c1[10]`,`r c1[19]`)  | < 0.001 |
-| Time of Day: Dusk | `r c1[2]`| (`r c1[11]`,`r c1[20]`) |  < 0.001 |
-| Time of Day: Night | `r c1[3]` | (`r c1[12]`,`r c1[21]`) |  < 0.001  |
-| Ingested: Yes | `r c1[4]` | (`r c1[13]`,`r c1[22]`)  |  < 0.001  |
-| Size: Small  |  `r c1[6]` | (`r c1[15]`,`r c1[23]`)  |  < 0.001  |
-| Size: Medium |  `r c1[5]` | (`r c1[14]`,`r c1[24]`)  | < 0.001   |
-| Warned: Yes | `r c1[7]` | (`r c1[16]`,`r c1[25]`)  |  < 0.001  |
-| Sky: Overcast | `r c1[8]` | (`r c1[17]`,`r c1[26]`) | < 0.05 |
-| Sky: Some Clouds | `r c1[9]` | (`r c1[18]`,`r c1[27]`) |  < 0.001  |
-
-### Adjusted associations:  Damage Level
+| Predictor | Odds Ratios (95% CI)  |  *p*-value |
+|---|---|---|
+| Time of Day: Day | `r c1[1]`  (`r c1[10]`,`r c1[19]`)  | < 0.001 |
+| Time of Day: Dusk | `r c1[2]` (`r c1[11]`,`r c1[20]`) |  < 0.001 |
+| Time of Day: Night | `r c1[3]`  (`r c1[12]`,`r c1[21]`) |  < 0.001  |
+| Ingested: Yes | `r c1[4]`  (`r c1[13]`,`r c1[22]`)  |  < 0.001  |
+| Size: Small  |  `r c1[6]`  (`r c1[15]`,`r c1[23]`)  |  < 0.001  |
+| Size: Medium |  `r c1[5]`  (`r c1[14]`,`r c1[24]`)  | < 0.001   |
+| Warned: Yes | `r c1[7]`  (`r c1[16]`,`r c1[25]`)  |  < 0.001  |
+| Sky: Overcast | `r c1[8]`  (`r c1[17]`,`r c1[26]`) | < 0.05 |
+| Sky: Some Clouds | `r c1[9]`  (`r c1[18]`,`r c1[27]`) |  < 0.001  |
 
 ```{r, include=FALSE}
 strike.reports <- read.csv("C:/Users/crack/Desktop/Proseminar/strike reports.csv")
@@ -404,7 +394,6 @@ exp(cbind(OR = coef(m5), ci))
 c1 <- round(exp(cbind(OR = coef(m5), ci)),3)
 
 ```
-
 
 The odds of damaging the aircraft during the day are `r c1[1]` times that of during dawn. The odds of damaging the aircraft during dusk are `r c1[2]` times that of during dawn. The odds of damaging the aircraft during the night are `r c1[3]` times that of during dawn. The odds of damaging the aircraft when a bird is ingested are `r c1[4]` times that of not being not being ingested. Small birds' odds of damaging the aircraft are  `r c1[6]` times that of large birds. Medium birds' odds of damaging the aircraft are `r c1[5]` times that of large birds. The odds of damaging the aircraft when the pilot is warned are `r c1[7]` times that of not being warned. The odds of damaging the aircraft with overcast skies are `r c1[8]` times that of no clouds. The odds of damaging the aircraft with some clouds in the sky are `r c1[9]` times that of no clouds.
 
