@@ -29,7 +29,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="approval-page.html"/>
+<link rel="prev" href="abstract.html"/>
 <link rel="next" href="methods.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -73,6 +73,7 @@
 <li class="divider"></li>
 <li><a href="index.html#section"></a></li>
 <li class="chapter" data-level="" data-path="approval-page.html"><a href="approval-page.html"><i class="fa fa-check"></i>Approval Page</a></li>
+<li class="chapter" data-level="" data-path="abstract.html"><a href="abstract.html"><i class="fa fa-check"></i>Abstract</a></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#statement-of-problem"><i class="fa fa-check"></i><b>1.1</b> Statement of Problem</a></li>
@@ -135,10 +136,11 @@
             <section class="normal" id="section-">
 <div id="introduction" class="section level1" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
+<div class="line-block">       Abstract. The existence of wildlife poses a severe threat to aviation during flight operations. While there are some mitigation efforts available, there is currently no solid way of predicting a bird strike. The purpose of this report is to find correlations in bird strike data between aircraft damage and the following predictor variables: size of bird, sky conditions, warning indication, time of day, and engine ingestion. The analyses were conducted using two different types of logistic regression: ordinal and binary. Both unadjusted and adjusted analyses were conducted. Statistical significance was defined as <span class="math inline">\(p&lt;0.05\)</span>. The following predictors were found to be statistically significant by contributing to damage level: size of bird, warning indication, bird ingestion, time of day, &amp; sky conditions. The outcome indicated damage had the following significant predictor variables: size of bird, warning indication, and bird ingestion. For each outcome, the predictor variables were significant in both the unadjusted as well as the adjusted models.</div>
 <div class="line-block">       On a cold New York morning, shortly after take-off, Captain Chesley B. Sullenberger’s aircraft struck a large group of Canadian geese, which caused the plane’s engines to fail. What was typically a routine flight quickly turned into a dire situation as the aircraft was over a major metropolitan area. Captain Sullenberger then safely landed the plane in the middle of New York City’s Hudson River. Captain Sullenberger’s decisive actions ensured the safety of 160 passengers and 7 crew members that day, but the experience highlighted the harsh reality of what can occur when wildlife and aviation mix. This phenomenal feat of airmanship became known as the “Miracle on the Hudson.” [1]</div>
 <div id="statement-of-problem" class="section level2" number="1.1">
 <h2><span class="header-section-number">1.1</span> Statement of Problem</h2>
-<div class="line-block">      The existence of wildlife pose a severe threat to aviation both in flight and during take-off/landings. Wildlife strikes can cause extreme damage to aircraft, sometimes resulting in a minor mishap or worse. While there are some mitigation efforts available, there is currently no solid way of predicting a strike. The purpose of this report is to find correlations in bird strike data between aircraft damage and the following predictor variables: size of bird, sky conditions, warning indication, time of day, and engine ingestion.</div>
+<div class="line-block">      The existence of wildlife poses a severe threat to aviation both in flight and during take-off/landings. Wildlife strikes can cause extreme damage to aircraft, sometimes resulting in a minor mishap or worse. While there are some mitigation efforts available, there is currently no solid way of predicting a strike. The purpose of this report is to find correlations in bird strike data between aircraft damage and the following predictor variables: size of bird, sky conditions, warning indication, time of day, and engine ingestion.</div>
 </div>
 <div id="relevance-of-problem" class="section level2" number="1.2">
 <h2><span class="header-section-number">1.2</span> Relevance of Problem</h2>
@@ -166,7 +168,7 @@
           </div>
         </div>
       </div>
-<a href="approval-page.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="abstract.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -198,7 +200,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/tiffw89/Proseminar/edit/master/03-introduction.Rmd",
+"link": "https://github.com/tiffw89/Proseminar/edit/master/04-introduction.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -206,7 +208,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/tiffw89/Proseminar/blob/master/03-introduction.Rmd",
+"link": "https://github.com/tiffw89/Proseminar/blob/master/04-introduction.Rmd",
 "text": null
 },
 "download": null,
@@ -221,6 +223,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

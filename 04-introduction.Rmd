@@ -1,11 +1,18 @@
 # Introduction 
+
+
+
+|        Abstract. The existence of wildlife poses a severe threat to aviation during flight operations. While there are some mitigation efforts available, there is currently no solid way of predicting a bird strike. The purpose of this report is to find correlations in bird strike data between aircraft damage and the following predictor variables: size of bird, sky conditions, warning indication, time of day, and engine ingestion. The analyses were conducted using two different types of logistic regression: ordinal and binary. Both unadjusted and adjusted analyses were conducted. Statistical significance was defined as $p<0.05$. The following predictors were found to be statistically significant by contributing to damage level: size of bird, warning indication, bird ingestion, time of day, & sky conditions. The outcome indicated damage had the following significant predictor variables: size of bird, warning indication, and bird ingestion. For each outcome, the predictor variables were significant in both the unadjusted as well as the adjusted models. 
+
+
+
  
 |        On a cold New York morning, shortly after take-off, Captain Chesley B. Sullenberger’s aircraft struck a large group of Canadian geese, which caused the plane’s engines to fail. What was typically a routine flight quickly turned into a dire situation as the aircraft was over a major metropolitan area. Captain Sullenberger then safely landed the plane in the middle of New York City's Hudson River. Captain Sullenberger’s decisive actions ensured the safety of 160 passengers and 7 crew members that day, but the experience highlighted the harsh reality of what can occur when wildlife and aviation mix. This phenomenal feat of airmanship became known as the "Miracle on the Hudson." [1]
 
 
 ## Statement of Problem 
 
-|       The existence of wildlife pose a severe threat to aviation both in flight and during take-off/landings. Wildlife strikes can cause extreme damage to aircraft, sometimes resulting in a minor mishap or worse. While there are some mitigation efforts available, there is currently no solid way of predicting a strike. The purpose of this report is to find correlations in bird strike data between aircraft damage and the following predictor variables: size of bird, sky conditions, warning indication, time of day, and engine ingestion.
+|       The existence of wildlife poses a severe threat to aviation both in flight and during take-off/landings. Wildlife strikes can cause extreme damage to aircraft, sometimes resulting in a minor mishap or worse. While there are some mitigation efforts available, there is currently no solid way of predicting a strike. The purpose of this report is to find correlations in bird strike data between aircraft damage and the following predictor variables: size of bird, sky conditions, warning indication, time of day, and engine ingestion.
 
 
 ## Relevance of Problem 
