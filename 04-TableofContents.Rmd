@@ -1,0 +1,52 @@
+# Table of Contents {-}
+
+
+Title Page . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . i
+<br>
+Approval Page . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ii
+<br>
+Abstract . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . iii
+<br>
+Table of Contents . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . iv
+<br>
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+<br>
+&emsp;Statement of Problem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1.1
+     <br>
+&emsp;Relevance of Problem. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.2
+     <br>
+&emsp;Literature Review . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.3
+     <br>
+Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+<br>
+&emsp;Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1
+     <br>
+&emsp;Variables. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.1
+ 		<br>
+&emsp;Statistical Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.2
+    <br>
+Linear Regression. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.2.1
+<br>
+Logistic Regression. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.2.2
+<br>
+&emsp;Analysis of the Current Data . . . . . . . . . . . . . . . . . . . . . . . . . . .  2.3
+     <br>
+Analysis Results  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+<br>
+&emsp;Indicated Damage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1
+     <br>
+&emsp;&emsp;Unadjusted Associations. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1.1
+        <br>
+&emsp;&emsp;Adjusted Associations. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1.2
+<br>
+&emsp;Damage Level . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.2
+     <br>
+&emsp;&emsp;Unadjusted Associations. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.2.1
+<br>
+&emsp;&emsp;Adjusted Associations. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.2.2
+<br>
+Conclusions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  4
+<br>
+References. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .v
+
+

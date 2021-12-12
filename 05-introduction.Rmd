@@ -29,7 +29,7 @@
 
 <br>
 
-|          In 2011, Richard Dolbeer conducted similar research on trends of damaging bird strikes. This report focused solely on aircraft outside the boundary of each respective airport. The rates were compared in 5 year increments from 1990-2009. Dolbeer used linear regression to complete the analysis and to determine any statistically significant trends, specifically at less than than 500 feet above ground level. Dolbeer concluded that after the implementation of mitigations efforts, there had been a reduction of strikes within the boundaries of the airport. In addition, Dolbeer suggested further development of bird-migration forecasting as well as the need for enhancing aircraft bird detection technology. [4]
+|          In 2011, Richard Dolbeer conducted similar research on trends of damaging bird strikes. This report focused solely on aircraft outside the boundary of each respective airport. The rates were compared in 5 year increments from 1990-2009. Dolbeer used linear regression to complete the analysis and to determine any statistically significant trends, specifically at less than 500 feet above ground level. Dolbeer concluded that after the implementation of mitigations efforts, there had been a reduction of strikes within the boundaries of the airport. In addition, Dolbeer suggested further development of bird-migration forecasting as well as the need for enhancing aircraft bird detection technology. [4]
 
 
 <br>
@@ -42,4 +42,4 @@
 
 <br>
 
-|          In 2020, a study was performed with an aim to find a correlation between bird migration movements and aircraft strikes. Additionally, they sought to find proactive measures to reduce the bird strikes. The analysis was conducted using linear regression by correlating the mean number of strikes with with a calculated mean migration intensity for 5 day periods throughout a year. The analysis concluded that the bird type probability of occurrence in each region, along with the birds mass and flight behavior, were critical predictors to damaging bird strikes. [7]
+|          In 2020, a study was performed with an aim to find a correlation between bird migration movements and aircraft strikes. Additionally, they sought to find proactive measures to reduce the bird strikes. The analysis was conducted using linear regression by correlating the mean number of strikes with a calculated mean migration intensity for 5 day periods throughout a year. The analysis concluded that the bird type probability of occurrence in each region, along with the birds' mass and flight behavior, were critical predictors to damaging bird strikes. [7]

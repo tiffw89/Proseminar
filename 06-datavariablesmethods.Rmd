@@ -8,7 +8,7 @@
 
 ### Variables 
 
-#### Predictor Variables 
+The following are a list of preditor variables:
 
 - Sky: Type of cloud cover
   - No Cloud
@@ -34,7 +34,7 @@
   - Yes
   - No
 
-#### Outcome Variables 
+The following are a list of outcome variables: 
 
 - Number of Injuries: Number of people injured
 
