@@ -63,11 +63,14 @@ c3 <- c3 %>% rename(lb = `2.5 %`,
 
 The estimated models can be written as:
 
-1. $ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm1))[,1][1], 2)`  `r round(coef(summary(glm1))[,1][3], 2)` \text{Small} `r round(coef(summary(glm1))[,1][2], 2)` \text{Medium} $
+1. \[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm1))[,1][1], 2)`  `r round(coef(summary(glm1))[,1][3], 2)` \text{Small} `r round(coef(summary(glm1))[,1][2], 2)` \text{Medium} \]
 
-2. $ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm2))[,1][1], 2)`  `r round(coef(summary(glm2))[,1][2], 2)` \text{Warned} $
 
-3. $ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm3))[,1][1], 2)` + `r round(coef(summary(glm3))[,1][2], 2)` \text{Ingested} $
+2. \[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm2))[,1][1], 2)`  `r round(coef(summary(glm2))[,1][2], 2)` \text{Warned} \]
+
+
+3. \[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm3))[,1][1], 2)` + `r round(coef(summary(glm3))[,1][2], 2)` \text{Ingested} \]
+
 
 
 | Predictor | Odds Ratios (95% CI)  |  *p*-value |
@@ -243,8 +246,11 @@ o6 <- as_tibble(round(exp(coef(summary(m6))[,1]),3))
 ### Unadjusted Associations: Damage Level
 
 The estimated models can be written as:
+
 <br>
+
 Model 1:
+
 <br>
 
 |Logit$\hat{P}(Y \le j)$ | Intercept | Day | Dusk | Night |
@@ -255,7 +261,9 @@ Model 1:
 |Logit$\hat{P}(Y \le 4)$|`r round(ctable1[7],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|
 
 <br>
+
 Model 2:
+
 <br>
 
 |Logit$\hat{P}(Y \le j)$ | Intercept |Overcast | SomeClouds |
@@ -266,7 +274,9 @@ Model 2:
 |Logit$\hat{P}(Y \le 4)$|`r round(ctable2[6],2)`|`r round(ctable2[1],2)`|`r round(ctable2[2],2)`|
 
 <br>
+
 Model 3:
+
 <br>
 
 |Logit$\hat{P}(Y \le j)$| Intercept | Small| Medium |
@@ -277,7 +287,9 @@ Model 3:
 |Logit$\hat{P}(Y \le 4)$|`r round(ctable4[6],2)`|`r round(ctable4[2],2)`|`r round(ctable4[1],2)`|
 
 <br>
+
 Model 4:
+
 <br>
 
 |Logit$\hat{P}(Y \le j)$ | Intercept | Warned|
@@ -288,7 +300,9 @@ Model 4:
 |Logit$\hat{P}(Y \le 4)$|`r round(ctable5[5],2)`|`r round(ctable5[1],2)`|
 
 <br>
+
 Model 5:
+
 <br>
 
 |Logit$\hat{P}(Y \le j)$ | Intercept | Ingested|
@@ -320,8 +334,6 @@ Model 5:
 The odds of damaging the aircraft during the day are `r c5[1]` times that of during dawn. The odds of damaging the aircraft during dusk are `r c5[2]` times that of during dawn. The odds of damaging the aircraft during the night are `r c5[3]` times that of during dawn. The odds of damaging the aircraft with overcast skies are `r c4[1]` times that of no clouds. The odds of damaging the aircraft with some clouds in the sky are `r c5[2]` times that of no clouds. Small birds' odds of damaging the aircraft are  `r o8$value[1]` times that of large birds. Medium birds' odds of damaging the aircraft are `r o8$value[2]` times that of large birds. The odds of damaging the aircraft when the pilot is warned are `r c6[1]` times that of not being warned. The odds of damaging the aircraft when a bird is ingested are `r c16[1]` times that of not being ingested.
 
 <br>
-
-
 
 ```{r, include=FALSE}
 strike.reports <- read.csv("C:/Users/crack/Desktop/Proseminar/strike reports.csv")

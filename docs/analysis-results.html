@@ -140,9 +140,9 @@
 <h3><span class="header-section-number">3.1.1</span> Unadjusted Associations: Indicated Damage</h3>
 <p>The estimated models can be written as:</p>
 <ol style="list-style-type: decimal">
-<li><p><span class="math display">\[ \text{logit} \left({\pi} \right) = -0.62  -3.16 \text{Small} -1.26 \text{Medium} \]</span></p></li>
-<li><p><span class="math display">\[ \text{logit} \left({\pi} \right) = -1.98  -0.48 \text{Warned} \]</span></p></li>
-<li><p><span class="math display">\[ \text{logit} \left({\pi} \right) = -2.77 + 2.27 \text{Ingested} \]</span></p></li>
+<li><p>$  ({} ) = -0.62 -3.16  -1.26  $</p></li>
+<li><p>$  ({} ) = -1.98 -0.48  $</p></li>
+<li><p>$  ({} ) = -2.77 + 2.27  $</p></li>
 </ol>
 <table>
 <thead>
@@ -253,44 +253,195 @@
 <p>The estimated models can be written as:
 <br>
 Model 1:
-<br>
-|Logit<span class="math inline">\(\hat{P}(Y \le j)\)</span> | Intercept | Day | Dusk | Night |
-|—|—|—|—|—|
-|Logit<span class="math inline">\(\hat{P}(Y \le 1)\)</span>|-7.67|-0.11|-0.22|-0.22|
-|Logit<span class="math inline">\(\hat{P}(Y \le 2)\)</span>|-3.02|-0.11|-0.22|-0.22|
-|Logit<span class="math inline">\(\hat{P}(Y \le 3)\)</span>|-2.49|-0.11|-0.22|-0.22|
-|Logit<span class="math inline">\(\hat{P}(Y \le 4)\)</span>|3.48|-0.11|-0.22|-0.22|
-<br>
+<br></p>
+<table>
+<thead>
+<tr class="header">
+<th>Logit<span class="math inline">\(\hat{P}(Y \le j)\)</span></th>
+<th>Intercept</th>
+<th>Day</th>
+<th>Dusk</th>
+<th>Night</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 1)\)</span></td>
+<td>-7.67</td>
+<td>-0.11</td>
+<td>-0.22</td>
+<td>-0.22</td>
+</tr>
+<tr class="even">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 2)\)</span></td>
+<td>-3.02</td>
+<td>-0.11</td>
+<td>-0.22</td>
+<td>-0.22</td>
+</tr>
+<tr class="odd">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 3)\)</span></td>
+<td>-2.49</td>
+<td>-0.11</td>
+<td>-0.22</td>
+<td>-0.22</td>
+</tr>
+<tr class="even">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 4)\)</span></td>
+<td>3.48</td>
+<td>-0.11</td>
+<td>-0.22</td>
+<td>-0.22</td>
+</tr>
+</tbody>
+</table>
+<p><br>
 Model 2:
-<br>
-|Logit<span class="math inline">\(\hat{P}(Y \le j)\)</span> | Intercept |Overcast | SomeClouds |
-|—|—|—|—|
-|Logit<span class="math inline">\(\hat{P}(Y \le 1)\)</span>|-7.8|0.06|0.06|
-|Logit<span class="math inline">\(\hat{P}(Y \le 2)\)</span>|-2.86|0.06|0.06|
-|Logit<span class="math inline">\(\hat{P}(Y \le 3)\)</span>| -2.31|0.06|0.06|
-|Logit<span class="math inline">\(\hat{P}(Y \le 4)\)</span>|3.68|0.06|0.06|
-<br>
-|Logit<span class="math inline">\(\hat{P}(Y \le j)\)</span>| Intercept | Small| Medium |
-|—|—|—|—|
-|Logit<span class="math inline">\(\hat{P}(Y \le 1)\)</span>|-6.45|1.67|0.98|
-|Logit<span class="math inline">\(\hat{P}(Y \le 2)\)</span>|-1.64|1.67|0.98|
-|Logit<span class="math inline">\(\hat{P}(Y \le 3)\)</span>|-1.1|1.67|0.98|
-|Logit<span class="math inline">\(\hat{P}(Y \le 4)\)</span>|5.02|1.67|0.98|
-<br>
-|Logit<span class="math inline">\(\hat{P}(Y \le j)\)</span> | Intercept | Warned|
-|—|—|—|
-|Logit<span class="math inline">\(\hat{P}(Y \le 1)\)</span>|-8.49|0.21|
-|Logit<span class="math inline">\(\hat{P}(Y \le 2)\)</span>|-2.8|0.21|
-|Logit<span class="math inline">\(\hat{P}(Y \le 3)\)</span>|-2.25|0.21|
-|Logit<span class="math inline">\(\hat{P}(Y \le 4)\)</span>|3.81|0.21|
-<br>
-|Logit<span class="math inline">\(\hat{P}(Y \le j)\)</span> | Intercept | Ingested|
-|—|—|—|
-|Logit<span class="math inline">\(\hat{P}(Y \le 1)\)</span>|-7.64|0.06|
-|Logit<span class="math inline">\(\hat{P}(Y \le 2)\)</span>|-2.85|0.06|
-|Logit<span class="math inline">\(\hat{P}(Y \le 3)\)</span>|-2.33|0.06|
-|Logit<span class="math inline">\(\hat{P}(Y \le 4)\)</span>|3.75|0.06|
-<br>
+<br></p>
+<table>
+<thead>
+<tr class="header">
+<th>Logit<span class="math inline">\(\hat{P}(Y \le j)\)</span></th>
+<th>Intercept</th>
+<th>Overcast</th>
+<th>SomeClouds</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 1)\)</span></td>
+<td>-7.8</td>
+<td>0.06</td>
+<td>0.06</td>
+</tr>
+<tr class="even">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 2)\)</span></td>
+<td>-2.86</td>
+<td>0.06</td>
+<td>0.06</td>
+</tr>
+<tr class="odd">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 3)\)</span></td>
+<td>-2.31</td>
+<td>0.06</td>
+<td>0.06</td>
+</tr>
+<tr class="even">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 4)\)</span></td>
+<td>3.68</td>
+<td>0.06</td>
+<td>0.06</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+Model 3:
+<br></p>
+<table>
+<thead>
+<tr class="header">
+<th>Logit<span class="math inline">\(\hat{P}(Y \le j)\)</span></th>
+<th>Intercept</th>
+<th>Small</th>
+<th>Medium</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 1)\)</span></td>
+<td>-6.45</td>
+<td>1.67</td>
+<td>0.98</td>
+</tr>
+<tr class="even">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 2)\)</span></td>
+<td>-1.64</td>
+<td>1.67</td>
+<td>0.98</td>
+</tr>
+<tr class="odd">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 3)\)</span></td>
+<td>-1.1</td>
+<td>1.67</td>
+<td>0.98</td>
+</tr>
+<tr class="even">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 4)\)</span></td>
+<td>5.02</td>
+<td>1.67</td>
+<td>0.98</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+Model 4:
+<br></p>
+<table>
+<thead>
+<tr class="header">
+<th>Logit<span class="math inline">\(\hat{P}(Y \le j)\)</span></th>
+<th>Intercept</th>
+<th>Warned</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 1)\)</span></td>
+<td>-8.49</td>
+<td>0.21</td>
+</tr>
+<tr class="even">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 2)\)</span></td>
+<td>-2.8</td>
+<td>0.21</td>
+</tr>
+<tr class="odd">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 3)\)</span></td>
+<td>-2.25</td>
+<td>0.21</td>
+</tr>
+<tr class="even">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 4)\)</span></td>
+<td>3.81</td>
+<td>0.21</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+Model 5:
+<br></p>
+<table>
+<thead>
+<tr class="header">
+<th>Logit<span class="math inline">\(\hat{P}(Y \le j)\)</span></th>
+<th>Intercept</th>
+<th>Ingested</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 1)\)</span></td>
+<td>-7.64</td>
+<td>0.06</td>
+</tr>
+<tr class="even">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 2)\)</span></td>
+<td>-2.85</td>
+<td>0.06</td>
+</tr>
+<tr class="odd">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 3)\)</span></td>
+<td>-2.33</td>
+<td>0.06</td>
+</tr>
+<tr class="even">
+<td>Logit<span class="math inline">\(\hat{P}(Y \le 4)\)</span></td>
+<td>3.75</td>
+<td>0.06</td>
+</tr>
+</tbody>
+</table>
+<p><br>
 | Predictor | Odds Ratios (95% CI) | <em>p</em>-value |
 |—|—|—|
 | Time of Day: Day | 0.893 (0.808,0.986) | &lt; 0.001 |
