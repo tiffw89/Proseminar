@@ -140,9 +140,9 @@
 <h3><span class="header-section-number">3.1.1</span> Unadjusted Associations: Indicated Damage</h3>
 <p>The estimated models can be written as:</p>
 <ol style="list-style-type: decimal">
-<li><p>$  ({} ) = -0.62 -3.16  -1.26  $</p></li>
-<li><p>$  ({} ) = -1.98 -0.48  $</p></li>
-<li><p>$  ({} ) = -2.77 + 2.27  $</p></li>
+<li><p><span class="math display">\[ \text{logit} \left({\pi} \right) = -0.62  -3.16 \text{Small} -1.26 \text{Medium} \]</span></p></li>
+<li><p><span class="math display">\[ \text{logit} \left({\pi} \right) = -1.98  -0.48 \text{Warned} \]</span></p></li>
+<li><p><span class="math display">\[ \text{logit} \left({\pi} \right) = -2.77 + 2.27 \text{Ingested} \]</span></p></li>
 </ol>
 <table>
 <thead>
@@ -250,10 +250,10 @@
 <h2><span class="header-section-number">3.2</span> Ordinal Regression Model Results</h2>
 <div id="unadjusted-associations-damage-level" class="section level3" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> Unadjusted Associations: Damage Level</h3>
-<p>The estimated models can be written as:
-<br>
-Model 1:
-<br></p>
+<p>The estimated models can be written as:</p>
+<p><br></p>
+<p>Model 1:</p>
+<p><br></p>
 <table>
 <thead>
 <tr class="header">
@@ -295,9 +295,9 @@ Model 1:
 </tr>
 </tbody>
 </table>
-<p><br>
-Model 2:
-<br></p>
+<p><br></p>
+<p>Model 2:</p>
+<p><br></p>
 <table>
 <thead>
 <tr class="header">
@@ -334,9 +334,9 @@ Model 2:
 </tr>
 </tbody>
 </table>
-<p><br>
-Model 3:
-<br></p>
+<p><br></p>
+<p>Model 3:</p>
+<p><br></p>
 <table>
 <thead>
 <tr class="header">
@@ -373,9 +373,9 @@ Model 3:
 </tr>
 </tbody>
 </table>
-<p><br>
-Model 4:
-<br></p>
+<p><br></p>
+<p>Model 4:</p>
+<p><br></p>
 <table>
 <thead>
 <tr class="header">
@@ -407,9 +407,9 @@ Model 4:
 </tr>
 </tbody>
 </table>
-<p><br>
-Model 5:
-<br></p>
+<p><br></p>
+<p>Model 5:</p>
+<p><br></p>
 <table>
 <thead>
 <tr class="header">
@@ -441,23 +441,88 @@ Model 5:
 </tr>
 </tbody>
 </table>
-<p><br>
-| Predictor | Odds Ratios (95% CI) | <em>p</em>-value |
-|—|—|—|
-| Time of Day: Day | 0.893 (0.808,0.986) | &lt; 0.001 |
-| Time of Day: Dusk | 0.799 (0.704,0.907) | &lt; 0.001 |
-| Time of Day: Night | 0.801 (0.723,0.886) | &lt; 0.001 |
-| Time of Day: Dawn | reference | |
-| Sky: Overcast | 1.065 (1.01,1.123) | &lt; 0.05 |
-| Sky: Some Clouds | 1.061 (1.018,1.106) | &lt; 0.001 |
-| Sky: No Clouds | reference | |
-| Size: Small | 2.652 (2.516, 2.795) | &lt; 0.001 |
-| Size: Medium | 5.326 (5.056, 5.61) | &lt; 0.001 |
-| Size: Large | reference | |
-| Warned: Yes | 1.239 (1.188,1.293) | &lt; 0.001 |
-| Warned: No | reference | |
-| Ingested: Yes | 2.743 (2.547,2.954) | &lt; 0.001 |
-| Ingested: No | reference | |</p>
+<p><br></p>
+<table>
+<thead>
+<tr class="header">
+<th>Predictor</th>
+<th>Odds Ratios (95% CI)</th>
+<th><em>p</em>-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Time of Day: Day</td>
+<td>0.893 (0.808,0.986)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="even">
+<td>Time of Day: Dusk</td>
+<td>0.799 (0.704,0.907)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="odd">
+<td>Time of Day: Night</td>
+<td>0.801 (0.723,0.886)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="even">
+<td>Time of Day: Dawn</td>
+<td>reference</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Sky: Overcast</td>
+<td>1.065 (1.01,1.123)</td>
+<td>&lt; 0.05</td>
+</tr>
+<tr class="even">
+<td>Sky: Some Clouds</td>
+<td>1.061 (1.018,1.106)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="odd">
+<td>Sky: No Clouds</td>
+<td>reference</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Size: Small</td>
+<td>2.652 (2.516, 2.795)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="odd">
+<td>Size: Medium</td>
+<td>5.326 (5.056, 5.61)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="even">
+<td>Size: Large</td>
+<td>reference</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Warned: Yes</td>
+<td>1.239 (1.188,1.293)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="even">
+<td>Warned: No</td>
+<td>reference</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ingested: Yes</td>
+<td>2.743 (2.547,2.954)</td>
+<td>&lt; 0.001</td>
+</tr>
+<tr class="even">
+<td>Ingested: No</td>
+<td>reference</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p>The odds of damaging the aircraft during the day are 0.893 times that of during dawn. The odds of damaging the aircraft during dusk are 0.799 times that of during dawn. The odds of damaging the aircraft during the night are 0.801 times that of during dawn. The odds of damaging the aircraft with overcast skies are 1.065 times that of no clouds. The odds of damaging the aircraft with some clouds in the sky are 0.799 times that of no clouds. Small birds’ odds of damaging the aircraft are 2.652 times that of large birds. Medium birds’ odds of damaging the aircraft are 5.326 times that of large birds. The odds of damaging the aircraft when the pilot is warned are 1.239 times that of not being warned. The odds of damaging the aircraft when a bird is ingested are 2.743 times that of not being ingested.</p>
 <p><br></p>
 </div>
