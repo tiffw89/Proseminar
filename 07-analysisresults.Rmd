@@ -312,8 +312,6 @@ Model 5:
 |Logit$\hat{P}(Y \le 3)$|`r round(ctable3[4],2)`|`r round(ctable2[1],2)`|
 |Logit$\hat{P}(Y \le 4)$|`r round(ctable3[5],2)`|`r round(ctable2[1],2)`|
 
-<br>
-
 | Predictor | Odds Ratios  (95% CI)  |  *p*-value |
 |---|---|---|
 | Time of Day: Day | `r c5[1]` (`r c5[4]`,`r c5[7]`)  | < 0.001 |
@@ -425,7 +423,6 @@ p <- pnorm(abs(ctable[, "t value"]), lower.tail = FALSE) * 2
 (ci <- confint(m5))
 exp(cbind(OR = coef(m5), ci))
 c1 <- round(exp(cbind(OR = coef(m5), ci)),3)
-
 ```
 
 The odds of damaging the aircraft during the day are `r c1[1]` times that of during dawn. The odds of damaging the aircraft during dusk are `r c1[2]` times that of during dawn. The odds of damaging the aircraft during the night are `r c1[3]` times that of during dawn. The odds of damaging the aircraft when a bird is ingested are `r c1[4]` times that of not being not being ingested. Small birds' odds of damaging the aircraft are  `r c1[6]` times that of large birds. Medium birds' odds of damaging the aircraft are `r c1[5]` times that of large birds. The odds of damaging the aircraft when the pilot is warned are `r c1[7]` times that of not being warned. The odds of damaging the aircraft with overcast skies are `r c1[8]` times that of no clouds. The odds of damaging the aircraft with some clouds in the sky are `r c1[9]` times that of no clouds. 
