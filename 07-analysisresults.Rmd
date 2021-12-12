@@ -57,9 +57,9 @@ c3 <- c3 %>% rename(lb = `2.5 %`,
                     ub = `97.5 %`)
 ```
 
-## Indicated Damage
+## Binary Regression Model Results
 
-### Unadjusted Associations
+### Unadjusted Associations: Indicated Damage
 
 The estimated models can be written as:
 
@@ -84,7 +84,7 @@ Small birds' odds of damaging the aircraft are `r o1$value[3]` times that of lar
 
 <br>
 
-### Adjusted Associations
+### Adjusted Associations: Indicated Damage
 
 ```{r, include=FALSE}
 strike.reports <- read.csv("C:/Users/crack/Desktop/Proseminar/strike reports.csv")
@@ -107,7 +107,7 @@ c1 <- c1 %>% rename(lb = `2.5 %`,
 
 The estimated model can be written as:
 
-4. \[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm11))[,1][1], 2)`  `r round(coef(summary(glm11))[,1][3], 2)` {\text{Small}} `r round(coef(summary(glm11))[,1][2], 2)` {\text{Medium}} `r round(coef(summary(glm11))[,1][4], 2)` \text{Warned} + `r round(coef(summary(glm11))[,1][5], 2)` \text{Ingested} \]
+\[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm11))[,1][1], 2)`  `r round(coef(summary(glm11))[,1][3], 2)` {\text{Small}} `r round(coef(summary(glm11))[,1][2], 2)` {\text{Medium}} `r round(coef(summary(glm11))[,1][4], 2)` \text{Warned} + `r round(coef(summary(glm11))[,1][5], 2)` \text{Ingested} \]
 
 | Predictor | Odds Ratios  (95% CI)  |  *p*-value |
 |---|---|---|
@@ -238,47 +238,51 @@ c16 <- round(exp(cbind(OR = coef(m6), t(ci))),3)
 o6 <- as_tibble(round(exp(coef(summary(m6))[,1]),3))
 ```
 
-## Damage Level
+## Ordinal Regression Model Results
 
-### Unadjusted Associations
+### Unadjusted Associations: Damage Level
 
 The estimated models can be written as:
-
+<br>
+Model 1:
+<br>
 |Logit$\hat{P}(Y \le j)$ | Intercept | Day | Dusk | Night |
 |---|---|---|---|---|
 |Logit$\hat{P}(Y \le 1)$|`r round(ctable1[4],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|
 |Logit$\hat{P}(Y \le 2)$|`r round(ctable1[5],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|
 |Logit$\hat{P}(Y \le 3)$|`r round(ctable1[6],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|
 |Logit$\hat{P}(Y \le 4)$|`r round(ctable1[7],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|
-      
+<br>
+Model 2:
+<br>
 |Logit$\hat{P}(Y \le j)$ | Intercept |Overcast | SomeClouds |
 |---|---|---|---|
 |Logit$\hat{P}(Y \le 1)$|`r round(ctable2[3],2)`|`r round(ctable2[1],2)`|`r round(ctable2[2],2)`|
 |Logit$\hat{P}(Y \le 2)$|`r round(ctable2[4],2)`|`r round(ctable2[1],2)`|`r round(ctable2[2],2)`|
 |Logit$\hat{P}(Y \le 3)$| `r round(ctable2[5],2)`|`r round(ctable2[1],2)`|`r round(ctable2[2],2)`|
 |Logit$\hat{P}(Y \le 4)$|`r round(ctable2[6],2)`|`r round(ctable2[1],2)`|`r round(ctable2[2],2)`|
-
+<br>
 |Logit$\hat{P}(Y \le j)$| Intercept | Small| Medium |
 |---|---|---|---|
 |Logit$\hat{P}(Y \le 1)$|`r round(ctable4[3],2)`|`r round(ctable4[2],2)`|`r round(ctable4[1],2)`|
 |Logit$\hat{P}(Y \le 2)$|`r round(ctable4[4],2)`|`r round(ctable4[2],2)`|`r round(ctable4[1],2)`|
 |Logit$\hat{P}(Y \le 3)$|`r round(ctable4[5],2)`|`r round(ctable4[2],2)`|`r round(ctable4[1],2)`|
 |Logit$\hat{P}(Y \le 4)$|`r round(ctable4[6],2)`|`r round(ctable4[2],2)`|`r round(ctable4[1],2)`|
-
+<br>
 |Logit$\hat{P}(Y \le j)$ | Intercept | Warned|
 |---|---|---|
 |Logit$\hat{P}(Y \le 1)$|`r round(ctable5[2],2)`|`r round(ctable5[1],2)`|
 |Logit$\hat{P}(Y \le 2)$|`r round(ctable5[3],2)`|`r round(ctable5[1],2)`|
 |Logit$\hat{P}(Y \le 3)$|`r round(ctable5[4],2)`|`r round(ctable5[1],2)`|
 |Logit$\hat{P}(Y \le 4)$|`r round(ctable5[5],2)`|`r round(ctable5[1],2)`|
-
+<br>
 |Logit$\hat{P}(Y \le j)$ | Intercept | Ingested|
 |---|---|---|
 |Logit$\hat{P}(Y \le 1)$|`r round(ctable3[2],2)`|`r round(ctable2[1],2)`|
 |Logit$\hat{P}(Y \le 2)$|`r round(ctable3[3],2)`|`r round(ctable2[1],2)`|
 |Logit$\hat{P}(Y \le 3)$|`r round(ctable3[4],2)`|`r round(ctable2[1],2)`|
 |Logit$\hat{P}(Y \le 4)$|`r round(ctable3[5],2)`|`r round(ctable2[1],2)`|
-
+<br>
 | Predictor | Odds Ratios  (95% CI)  |  *p*-value |
 |---|---|---|
 | Time of Day: Day | `r c5[1]` (`r c5[4]`,`r c5[7]`)  | < 0.001 |
@@ -326,7 +330,7 @@ c1 <- round(exp(cbind(OR = coef(m5), ci)),3)
 
 ```
 
-### Adjusted Associations 
+### Adjusted Associations: Damage Level 
 
 | Intercept | Day | Dusk | Night | Ingested | Small | Medium | Warned | Overcast | Some Clouds |
 |---|---|---|---|---|---|---|---|---|

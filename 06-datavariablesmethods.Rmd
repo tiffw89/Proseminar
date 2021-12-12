@@ -65,23 +65,23 @@ Ordinary linear regression is a method commonly used to estimate a statistical r
 
 \[ Y = \beta_0 + \beta_1 X_1 + \cdots + \beta_k X_k \]
 
-- $Y$ is the continuous outcome
+- $Y$ is the continuous outcome.
 
-- $X_i$ is the $i^{\text{th}}$ predictor; $i = 1, \cdots, k$, where $k$ is the number of predictors in the model
+- $X_i$ is the $i^{\text{th}}$ predictor; $i = 1, \cdots, k$, where $k$ is the number of predictors in the model.
 
-- $\beta_i$ is the slope for predictor $i$
+- $\beta_i$ is the slope for predictor $i$.
 
-- $\beta_0$ is the $Y$-intercept
+- $\beta_0$ is the $Y$-intercept.
 
 *Assumptions of the Model*
 
-1. Homoscedasticity: the residual has constant variance for any value of $X$ 
+1. Homoscedasticity: the residual has constant variance for any value of $X$.
 
-2. Independence: observations are independent from one another
+2. Independence: observations are independent from one another.
 
-3. Linearity: there exists a linear relationship between the two variables $X$ and $Y$
+3. Linearity: there exists a linear relationship between the two variables $X$ and $Y$.
 
-4. Normality: the residuals are normally distributed
+4. Normality: the residuals are normally distributed.
 
 *Interpretation*
 
@@ -99,9 +99,9 @@ Ordinary linear regression is a method commonly used to estimate a statistical r
 
 - The test statistic is defined by the following equation: \[ t_0 = \frac{\hat{\beta}_i}{\text{SE}_{\hat{\beta}_i}} \] 
   
-  - $\hat\beta_i$ is the slope of the sample regression line
+  - $\hat\beta_i$ is the slope of the sample regression line.
 
-  - $SE_{\hat\beta_i}$ is the standard error of the slope
+  - $SE_{\hat\beta_i}$ is the standard error of the slope.
 
 
 - We can construct confidence intervals as follows:
@@ -125,21 +125,21 @@ Binary logistic regression is appropriate for categorical outcomes with only two
 
 \[ \ln \left( \frac{\pi}{1-\pi} \right) = \beta_0 + \beta_1 X_1 + \cdots + \beta_k X_k \]
 
-- $\pi=P[Y=1]$ = the probability of the outcome
+- $\pi=P[Y=1]$ = the probability of the outcome.
 
-- $X_i$ is the $i^{\text{th}}$ predictor; $i = 1, \cdots, k$, where $k$ is the number of predictors in the model
+- $X_i$ is the $i^{\text{th}}$ predictor; $i = 1, \cdots, k$, where $k$ is the number of predictors in the model.
 
-- $\beta_i$ is the slope for predictor $i$
+- $\beta_i$ is the slope for predictor $i$.
 
-- $\beta_0$ is the $Y$-intercept
+- $\beta_0$ is the $Y$-intercept.
 
 *Assumptions of the Model*
 
-1. Binary outcome: the response variable is binary
+1. Binary outcome: the response variable is binary.
 
-2. Independence: observations are independent from one another
+2. Independence: observations are independent from one another.
 
-3. Linearity: there exists a linear relationship between $X$ and the log-odds
+3. Linearity: there exists a linear relationship between $X$ and the log-odds.
 
 *Interpretation*
 
@@ -158,9 +158,9 @@ Binary logistic regression is appropriate for categorical outcomes with only two
 
 - The test statistic is defined by the following equation: \[ z_0 = \frac{ \hat{\beta}_i-{\beta}_i^{(0)}}{\text{SE}_{\hat{\beta}_i}} \]
 
-  - $\hat\beta_i$ is the slope of the sample regression line
+  - $\hat\beta_i$ is the slope of the sample regression line.
 
-  - $\text{SE}_{\hat\beta_i}$ is the standard error of the slope
+  - $\text{SE}_{\hat\beta_i}$ is the standard error of the slope.
 
 - We can construct confidence intervals as follows:
 
@@ -176,26 +176,26 @@ Ordinal logistic regression is appropriate for categorical outcomes with ordinal
 
 \[ \text{logit}(P[Y\le j])=\text{ln}\left(\frac{\pi_1 + \cdots + \pi_j}{{\pi_{j+1}} + \cdots + {\pi_c}}\right) = \hat\beta_{0j} + \hat\beta_{1}X_1 + \cdots + \hat\beta_{k}X_k  \]
 
-- $\text{logit}(P[Y\le j])$ is the probability that our outcome is in category $j$ or one below it
+- $\text{logit}(P[Y\le j])$ is the probability that our outcome is in category $j$ or one below it.
   
-- $Y$ is an ordinal outcome
+- $Y$ is an ordinal outcome.
 
-- $X_i$ is the $i^{\text{th}}$ predictor; $i = 1, \dots, k$, where $k$ is the number of predictors in the model
+- $X_i$ is the $i^{\text{th}}$ predictor; $i = 1, \dots, k$, where $k$ is the number of predictors in the model.
 
-- $\beta_i$ is the slope for predictor $i$
+- $\beta_i$ is the slope for predictor $i$.
 
-- $\beta_{0j}$ is the $Y$-intercept for the model comparing $Y \le j$ to $Y > j$
+- $\beta_{0j}$ is the $Y$-intercept for the model comparing $Y \le j$ to $Y > j$.
 
 
 *Assumptions of the Model*
 
-1. Ordinal response: the response variable is ordinal
+1. Ordinal response: the response variable is ordinal.
 
-2. Independence: observations are independent of one another
+2. Independence: observations are independent of one another.
 
-3. Linearity: there exists a linear relationship between $X$ and the cumulative logit
+3. Linearity: there exists a linear relationship between $X$ and the cumulative logit.
 
-4. Proportional odds: for all predictors in the model, the odds ratios will be the same, regardless of any two outcomes selected for comparison
+4. Proportional odds: for all predictors in the model, the odds ratios will be the same, regardless of any two outcomes selected for comparison.
 
 *Interpretation*
 
@@ -217,9 +217,9 @@ Odds ratios are interpreted slightly different than what we saw in binary logist
 
 - The test statistic is defined by the following equation: \[ z_0 = \frac{ \hat{\beta}_i-{\beta}_i^{(0)}}{\text{SE}_{\hat{\beta}_i}} \]
 
-  - $\hat\beta_i$ is the slope of the sample regression line
+  - $\hat\beta_i$ is the slope of the sample regression line.
 
-  - $\text{SE}_{\hat\beta_i}$ is the standard error of the slope
+  - $\text{SE}_{\hat\beta_i}$ is the standard error of the slope.
 
 - We can construct confidence intervals as follows:
 

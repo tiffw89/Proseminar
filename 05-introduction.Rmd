@@ -1,13 +1,6 @@
 # Introduction 
 
-
-
-|        Abstract. The existence of wildlife poses a severe threat to aviation during flight operations. While there are some mitigation efforts available, there is currently no solid way of predicting a bird strike. The purpose of this report is to find correlations in bird strike data between aircraft damage and the following predictor variables: size of bird, sky conditions, warning indication, time of day, and engine ingestion. The analyses were conducted using two different types of logistic regression: ordinal and binary. Both unadjusted and adjusted analyses were conducted. Statistical significance was defined as $p<0.05$. The following predictors were found to be statistically significant by contributing to damage level: size of bird, warning indication, bird ingestion, time of day, & sky conditions. The outcome indicated damage had the following significant predictor variables: size of bird, warning indication, and bird ingestion. For each outcome, the predictor variables were significant in both the unadjusted as well as the adjusted models. 
-
-
-
- 
-|        On a cold New York morning, shortly after take-off, Captain Chesley B. Sullenberger’s aircraft struck a large group of Canadian geese, which caused the plane’s engines to fail. What was typically a routine flight quickly turned into a dire situation as the aircraft was over a major metropolitan area. Captain Sullenberger then safely landed the plane in the middle of New York City's Hudson River. Captain Sullenberger’s decisive actions ensured the safety of 160 passengers and 7 crew members that day, but the experience highlighted the harsh reality of what can occur when wildlife and aviation mix. This phenomenal feat of airmanship became known as the "Miracle on the Hudson." [1]
+|        On a cold New York morning, shortly after take-off, Captain Chesley B. Sullenberger’s aircraft struck a large group of Canadian geese, which caused the plane’s engines to fail. What was typically a routine flight quickly turned into a dire situation, as the aircraft was over a major metropolitan area. Captain Sullenberger then safely landed the plane in the middle of New York City's Hudson River. Captain Sullenberger’s decisive actions ensured the safety of 160 passengers and 7 crew members that day, but the experience highlighted the harsh reality of what can occur when wildlife and aviation mix. This phenomenal feat of airmanship became known as the "Miracle on the Hudson." [1]
 
 
 ## Statement of Problem 
@@ -21,8 +14,6 @@
 
 
 ## Literature Review 
-
-### Previous Research 
 
 |         There have been several notable analyses done on strike data. In 1998, the United States Air Force funded a research project performed by Christine A. Tedrow to analyze the occurrence of bird strikes to military aircraft. The purpose of this study was to determine economic costs associated with bird strikes and to identify safety concerns in order to determine appropriate precautionary measures. The strike data analysis pin-pointed various trends relating to damaging bird strikes. Several statistical methods were used in this research, including logistic regression. It was found that the following variables were concluded to be strong predictors of a damaging bird strike: aircraft group, phase of flight, aircraft speed, taxonomic group, and bird mass. It was also notable that the hours during daylight and dusk were hazardous times for bird strikes. The last outcome of the military strike report project found that the highest bird strike rate of all military aircraft occurred in bomber aircraft. [3]
 
