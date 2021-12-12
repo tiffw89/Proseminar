@@ -1,7 +1,7 @@
 
 ### Final stages
 
-- [ ] 2. In `index.Rmd`, change YOUR  to your name.
+- [ ] 2. In `index.Rmd`, change YOU to your name.
 
 - [ ] 3. In `_bookdown.yml`, change YOUR GITHUB USERNAME to your GitHub username in the two places it appears.
 
