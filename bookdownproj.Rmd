@@ -1,3 +1,69 @@
+--- 
+title: "A Statistical Analysis of Aviation Wildlife Mishaps"
+site: bookdown::bookdown_site
+---
+
+#  {-}
+
+Placeholder
+
+
+
+<!--chapter:end:index.Rmd-->
+
+
+# Approval Page {-}
+
+Placeholder
+
+
+
+<!--chapter:end:02-approvalpage.Rmd-->
+
+# Abstract {-}
+
+|        The existence of wildlife poses a severe threat to aviation during flight operations. While there are some mitigation efforts available, there is currently no solid way of predicting a bird strike. The purpose of this report is to find correlations in bird strike data between aircraft damage and the following predictor variables: size of bird, sky conditions, warning indication, time of day, and engine ingestion. The analyses were conducted using two different types of logistic regression: ordinal and binary. Both unadjusted and adjusted analyses were conducted. Statistical significance was defined as $p<0.05$. The following predictors were found to be statistically significant by contributing to damage level: size of bird, warning indication, bird ingestion, time of day, & sky conditions. The outcome indicated damage had the following significant predictor variables: size of bird, warning indication, and bird ingestion. For each outcome, the predictor variables were significant in both the unadjusted as well as the adjusted models. 
+
+<!--chapter:end:03-abstract.Rmd-->
+
+
+# Table of Contents {-}
+
+Placeholder
+
+
+
+<!--chapter:end:04-TableofContents.Rmd-->
+
+
+# Introduction 
+
+Placeholder
+
+
+## Statement of Problem 
+## Relevance of Problem 
+## Literature Review 
+
+<!--chapter:end:05-introduction.Rmd-->
+
+
+# Methods
+
+Placeholder
+
+
+## Data
+### Variables 
+## Statistical Methods 
+### Linear Regression 
+### Logistic Regression 
+#### Binary Logistic Regression 
+#### Ordinal Logistic Regression Model
+## Analysis of the Current Data 
+
+<!--chapter:end:06-datavariablesmethods.Rmd-->
+
 # Analysis Results
  
 ```{r setup , include=FALSE}
@@ -275,7 +341,6 @@ Model 3:
 |Logit$\hat{P}(Y \le 2)$|`r round(ctable4[4],2)`|`r round(ctable4[2],2)`|`r round(ctable4[1],2)`|
 |Logit$\hat{P}(Y \le 3)$|`r round(ctable4[5],2)`|`r round(ctable4[2],2)`|`r round(ctable4[1],2)`|
 |Logit$\hat{P}(Y \le 4)$|`r round(ctable4[6],2)`|`r round(ctable4[2],2)`|`r round(ctable4[1],2)`|
-
 <br>
 Model 4:
 <br>
@@ -299,7 +364,6 @@ Model 5:
 |Logit$\hat{P}(Y \le 4)$|`r round(ctable3[5],2)`|`r round(ctable2[1],2)`|
 
 <br>
-
 | Predictor | Odds Ratios  (95% CI)  |  *p*-value |
 |---|---|---|
 | Time of Day: Day | `r c5[1]` (`r c5[4]`,`r c5[7]`)  | < 0.001 |
@@ -417,4 +481,47 @@ c1 <- round(exp(cbind(OR = coef(m5), ci)),3)
 ```
 
 The odds of damaging the aircraft during the day are `r c1[1]` times that of during dawn. The odds of damaging the aircraft during dusk are `r c1[2]` times that of during dawn. The odds of damaging the aircraft during the night are `r c1[3]` times that of during dawn. The odds of damaging the aircraft when a bird is ingested are `r c1[4]` times that of not being not being ingested. Small birds' odds of damaging the aircraft are  `r c1[6]` times that of large birds. Medium birds' odds of damaging the aircraft are `r c1[5]` times that of large birds. The odds of damaging the aircraft when the pilot is warned are `r c1[7]` times that of not being warned. The odds of damaging the aircraft with overcast skies are `r c1[8]` times that of no clouds. The odds of damaging the aircraft with some clouds in the sky are `r c1[9]` times that of no clouds. 
+
+
+<!--chapter:end:07-analysisresults.Rmd-->
+
+# Conclusions 
+
+|         The goal for this project was to conduct a statistical analysis on aviation wildlife mishaps, specifically focusing on bird strikes. In addition, this project taught the value of utilizing R markdown to analyze and display data as well as publishing it by way of R bookdown. It was also very meaningful to learn the different types and techniques of logistic regression.
+
+
+
+## Summary: Interpretation
+
+|         Through this analysis, the following predictors were found to be statistically significant by contributing to damage level: size of bird, warning indication, bird ingestion, time of day, & sky conditions. The outcome indicated damage had the following significant predictor variables: size of bird, warning indication, and bird ingestion. For each outcome, the predictor variables were significant in both the unadjusted as well as the adjusted models. The results were similar to those in the literature review, where bird mass (size) and time of day were significant predictors to bird strikes.
+
+##  Limitations 
+
+|         There were several limitations pertaining to this project. While there was strike data available for all of North America, data was restricted to the United States for this project. This project also limited data to birds only, no other wildlife. While there were variable descriptions available, they were not entirely clear, thus further research was required to fully comprehend their meanings.  While reporting strikes to the FAA is mandatory, it's reasonable to assume that some do not get reported. We also cannot account for the total number of flights due to not having non-strike data. 
+
+<!--chapter:end:08-conclusions.Rmd-->
+
+# References {-}
+
+1. A&E Television Networks. (2011, March 15). Pilot sully Sullenberger performs "Miracle on the Hudson". History.com. Retrieved November 1, 2021, from https://www.history.com/this-day-in-history/sully-sullenberger-performs-miracle-on-the-hudson.
+
+2. FAA Wildlife Strike Database. (n.d.). Retrieved July 15, 2021, from https://wildlife.faa.gov/home. 
+
+3. Tedrow C. (1998). "Bird Strike Risk Assessment for United States Air Force Airfields and Aircraft." [Master's thesis, Virginia Polytechnic Institute and State University]. 
+
+4. Dolbeer RA. "Increasing trend of damaging bird strikes with aircraft outside the airport boundary: implications for mitigation measures." Human-Wildlife Interactions, 2011, 5(2), 235–248.
+
+5. Fernandez E, Gaffney J, Blackwell B, & Baumhardt P. "Bird strikes and aircraft fuselage color: a correlational study." Human–Wildlife Interactions, 2011, 5(2):224–234. 
+
+6. Ahmad M. "Bird-strike aircraft accidents and their prevention." Asian Journal of Science and Technology, 2019, 10(01): 9251-9257.
+
+7. Nilsson C, La Sorte F, Dokter A, Horton K, Van Doren B, Kolodzinski J, Shamoun-Baranes J, & Farnsworth A. "Bird strikes at commercial airports explained by citizen science and Weather Radar Data." Journal of Applied Ecology, 2021, 58(01):2029-2039.
+
+
+ 
+ 
+
+
+
+<!--chapter:end:09-references.Rmd-->
 
