@@ -333,7 +333,7 @@ Model 5:
 
 <br>
 
-delete. The odds of damaging the aircraft during the day are `r c5[1]` times that of during dawn. The odds of damaging the aircraft during dusk are `r c5[2]` times that of during dawn. The odds of damaging the aircraft during the night are `r c5[3]` times that of during dawn. The odds of damaging the aircraft with overcast skies are `r c4[1]` times that of no clouds. The odds of damaging the aircraft with some clouds in the sky are `r c5[2]` times that of no clouds. Small birds' odds of damaging the aircraft are  `r o8$value[1]` times that of large birds. Medium birds' odds of damaging the aircraft are `r o8$value[2]` times that of large birds. The odds of damaging the aircraft when the pilot is warned are `r c6[1]` times that of not being warned. The odds of damaging the aircraft when a bird is ingested are `r c16[1]` times that of not being ingested.
+The odds of damaging the aircraft during the day are `r c5[1]` times that of during dawn. The odds of damaging the aircraft during dusk are `r c5[2]` times that of during dawn. The odds of damaging the aircraft during the night are `r c5[3]` times that of during dawn. The odds of damaging the aircraft with overcast skies are `r c4[1]` times that of no clouds. The odds of damaging the aircraft with some clouds in the sky are `r c5[2]` times that of no clouds. Small birds' odds of damaging the aircraft are  `r o8$value[1]` times that of large birds. Medium birds' odds of damaging the aircraft are `r o8$value[2]` times that of large birds. The odds of damaging the aircraft when the pilot is warned are `r c6[1]` times that of not being warned. The odds of damaging the aircraft when a bird is ingested are `r c16[1]` times that of not being ingested.
 
 <br>
 
