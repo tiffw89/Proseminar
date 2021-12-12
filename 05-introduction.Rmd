@@ -1,6 +1,6 @@
 # Introduction 
 
-|        On a cold New York morning, shortly after take-off, Captain Chesley B. Sullenberger’s aircraft struck a large group of Canadian geese, which caused the plane’s engines to fail. What was typically a routine flight quickly turned into a dire situation, as the aircraft was over a major metropolitan area. Captain Sullenberger then safely landed the plane in the middle of New York City's Hudson River. Captain Sullenberger’s decisive actions ensured the safety of 160 passengers and 7 crew members that day, but the experience highlighted the harsh reality of what can occur when wildlife and aviation mix. This phenomenal feat of airmanship became known as the "Miracle on the Hudson." [1]
+|        On a cold New York morning, shortly after take-off, Captain Chesley B. Sullenberger’s aircraft struck a large group of Canadian geese, which caused the plane’s engines to fail. What was typically a routine flight quickly turned into a dire situation, as the aircraft was over a major metropolitan area. Captain Sullenberger then safely landed the plane in the middle of New York City's Hudson River. Captain Sullenberger’s decisive actions ensured the safety of 160 passengers and 7 crew members that day, but the experience highlighted the harsh reality of what can occur when wildlife and aviation mix. This phenomenal feat of airmanship became known as the "Miracle on the Hudson." [1] 
 
 
 ## Statement of Problem 
