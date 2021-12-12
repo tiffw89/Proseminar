@@ -246,24 +246,29 @@ The estimated models can be written as:
 <br>
 Model 1:
 <br>
+
 |Logit$\hat{P}(Y \le j)$ | Intercept | Day | Dusk | Night |
 |---|---|---|---|---|
 |Logit$\hat{P}(Y \le 1)$|`r round(ctable1[4],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|
 |Logit$\hat{P}(Y \le 2)$|`r round(ctable1[5],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|
 |Logit$\hat{P}(Y \le 3)$|`r round(ctable1[6],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|
 |Logit$\hat{P}(Y \le 4)$|`r round(ctable1[7],2)`|`r round(ctable1[1],2)`|`r round(ctable1[2],2)`|`r round(ctable1[3],2)`|
+
 <br>
 Model 2:
 <br>
+
 |Logit$\hat{P}(Y \le j)$ | Intercept |Overcast | SomeClouds |
 |---|---|---|---|
 |Logit$\hat{P}(Y \le 1)$|`r round(ctable2[3],2)`|`r round(ctable2[1],2)`|`r round(ctable2[2],2)`|
 |Logit$\hat{P}(Y \le 2)$|`r round(ctable2[4],2)`|`r round(ctable2[1],2)`|`r round(ctable2[2],2)`|
 |Logit$\hat{P}(Y \le 3)$| `r round(ctable2[5],2)`|`r round(ctable2[1],2)`|`r round(ctable2[2],2)`|
 |Logit$\hat{P}(Y \le 4)$|`r round(ctable2[6],2)`|`r round(ctable2[1],2)`|`r round(ctable2[2],2)`|
+
 <br>
 Model 3:
 <br>
+
 |Logit$\hat{P}(Y \le j)$| Intercept | Small| Medium |
 |---|---|---|---|
 |Logit$\hat{P}(Y \le 1)$|`r round(ctable4[3],2)`|`r round(ctable4[2],2)`|`r round(ctable4[1],2)`|
@@ -273,21 +278,25 @@ Model 3:
 <br>
 Model 4:
 <br>
+
 |Logit$\hat{P}(Y \le j)$ | Intercept | Warned|
 |---|---|---|
 |Logit$\hat{P}(Y \le 1)$|`r round(ctable5[2],2)`|`r round(ctable5[1],2)`|
 |Logit$\hat{P}(Y \le 2)$|`r round(ctable5[3],2)`|`r round(ctable5[1],2)`|
 |Logit$\hat{P}(Y \le 3)$|`r round(ctable5[4],2)`|`r round(ctable5[1],2)`|
 |Logit$\hat{P}(Y \le 4)$|`r round(ctable5[5],2)`|`r round(ctable5[1],2)`|
+
 <br>
 Model 5:
 <br>
+
 |Logit$\hat{P}(Y \le j)$ | Intercept | Ingested|
 |---|---|---|
 |Logit$\hat{P}(Y \le 1)$|`r round(ctable3[2],2)`|`r round(ctable2[1],2)`|
 |Logit$\hat{P}(Y \le 2)$|`r round(ctable3[3],2)`|`r round(ctable2[1],2)`|
 |Logit$\hat{P}(Y \le 3)$|`r round(ctable3[4],2)`|`r round(ctable2[1],2)`|
 |Logit$\hat{P}(Y \le 4)$|`r round(ctable3[5],2)`|`r round(ctable2[1],2)`|
+
 <br>
 | Predictor | Odds Ratios  (95% CI)  |  *p*-value |
 |---|---|---|
