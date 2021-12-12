@@ -63,11 +63,11 @@ c3 <- c3 %>% rename(lb = `2.5 %`,
 
 The estimated models can be written as:
 
-1. \[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm1))[,1][1], 2)`  `r round(coef(summary(glm1))[,1][3], 2)` \text{Small} `r round(coef(summary(glm1))[,1][2], 2)` \text{Medium} \]
+1. $ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm1))[,1][1], 2)`  `r round(coef(summary(glm1))[,1][3], 2)` \text{Small} `r round(coef(summary(glm1))[,1][2], 2)` \text{Medium} $
 
-2. \[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm2))[,1][1], 2)`  `r round(coef(summary(glm2))[,1][2], 2)` \text{Warned} \]
+2. $ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm2))[,1][1], 2)`  `r round(coef(summary(glm2))[,1][2], 2)` \text{Warned} $
 
-3. \[ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm3))[,1][1], 2)` + `r round(coef(summary(glm3))[,1][2], 2)` \text{Ingested} \]
+3. $ \text{logit} \left({\pi} \right) = `r round(coef(summary(glm3))[,1][1], 2)` + `r round(coef(summary(glm3))[,1][2], 2)` \text{Ingested} $
 
 
 | Predictor | Odds Ratios (95% CI)  |  *p*-value |
