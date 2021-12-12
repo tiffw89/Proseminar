@@ -79,10 +79,7 @@
 <ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#statement-of-problem"><i class="fa fa-check"></i><b>1.1</b> Statement of Problem</a></li>
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#relevance-of-problem"><i class="fa fa-check"></i><b>1.2</b> Relevance of Problem</a></li>
-<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#literature-review"><i class="fa fa-check"></i><b>1.3</b> Literature Review</a>
-<ul>
-<li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#previous-research"><i class="fa fa-check"></i><b>1.3.1</b> Previous Research</a></li>
-</ul></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#literature-review"><i class="fa fa-check"></i><b>1.3</b> Literature Review</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>2</b> Methods</a>
 <ul>
@@ -99,15 +96,15 @@
 </ul></li>
 <li class="chapter" data-level="3" data-path="analysis-results.html"><a href="analysis-results.html"><i class="fa fa-check"></i><b>3</b> Analysis Results</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="analysis-results.html"><a href="analysis-results.html#indicated-damage"><i class="fa fa-check"></i><b>3.1</b> Indicated Damage</a>
+<li class="chapter" data-level="3.1" data-path="analysis-results.html"><a href="analysis-results.html#binary-regression-model-results"><i class="fa fa-check"></i><b>3.1</b> Binary Regression Model Results</a>
 <ul>
-<li class="chapter" data-level="3.1.1" data-path="analysis-results.html"><a href="analysis-results.html#unadjusted-associations"><i class="fa fa-check"></i><b>3.1.1</b> Unadjusted Associations</a></li>
-<li class="chapter" data-level="3.1.2" data-path="analysis-results.html"><a href="analysis-results.html#adjusted-associations"><i class="fa fa-check"></i><b>3.1.2</b> Adjusted Associations</a></li>
+<li class="chapter" data-level="3.1.1" data-path="analysis-results.html"><a href="analysis-results.html#unadjusted-associations-indicated-damage"><i class="fa fa-check"></i><b>3.1.1</b> Unadjusted Associations: Indicated Damage</a></li>
+<li class="chapter" data-level="3.1.2" data-path="analysis-results.html"><a href="analysis-results.html#adjusted-associations-indicated-damage"><i class="fa fa-check"></i><b>3.1.2</b> Adjusted Associations: Indicated Damage</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="analysis-results.html"><a href="analysis-results.html#damage-level"><i class="fa fa-check"></i><b>3.2</b> Damage Level</a>
+<li class="chapter" data-level="3.2" data-path="analysis-results.html"><a href="analysis-results.html#ordinal-regression-model-results"><i class="fa fa-check"></i><b>3.2</b> Ordinal Regression Model Results</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="analysis-results.html"><a href="analysis-results.html#unadjusted-associations-1"><i class="fa fa-check"></i><b>3.2.1</b> Unadjusted Associations</a></li>
-<li class="chapter" data-level="3.2.2" data-path="analysis-results.html"><a href="analysis-results.html#adjusted-associations-1"><i class="fa fa-check"></i><b>3.2.2</b> Adjusted Associations</a></li>
+<li class="chapter" data-level="3.2.1" data-path="analysis-results.html"><a href="analysis-results.html#unadjusted-associations-damage-level"><i class="fa fa-check"></i><b>3.2.1</b> Unadjusted Associations: Damage Level</a></li>
+<li class="chapter" data-level="3.2.2" data-path="analysis-results.html"><a href="analysis-results.html#adjusted-associations-damage-level"><i class="fa fa-check"></i><b>3.2.2</b> Adjusted Associations: Damage Level</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>4</b> Conclusions</a>
@@ -116,7 +113,6 @@
 <li class="chapter" data-level="4.2" data-path="conclusions.html"><a href="conclusions.html#limitations"><i class="fa fa-check"></i><b>4.2</b> Limitations</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -143,8 +139,7 @@
 <div class="line-block">         The wildlife strike data in this project comes directly from the Federal Aviation Administration, where data is contributed in real-time when a strike occurs. Data becomes available when a bird strike is reported to the FAA by an airline or some other aviation industry. The airline or other pilots are required to report this data only when a strike occurs. Thus, there is not data available for every single flight, only those that have experienced a wildlife strike. While there is data available from 1990 to this very day, this project only uses the data through the end of 2020. Additionally, this project concentrates specifically on bird strikes. [2]</div>
 <div id="variables" class="section level3" number="2.1.1">
 <h3><span class="header-section-number">2.1.1</span> Variables</h3>
-<div id="predictor-variables" class="section level4" number="2.1.1.1">
-<h4><span class="header-section-number">2.1.1.1</span> Predictor Variables</h4>
+<p>The following are a list of preditor variables:</p>
 <ul>
 <li>Sky: Type of cloud cover
 <ul>
@@ -176,9 +171,7 @@
 <li>No</li>
 </ul></li>
 </ul>
-</div>
-<div id="outcome-variables" class="section level4" number="2.1.1.2">
-<h4><span class="header-section-number">2.1.1.2</span> Outcome Variables</h4>
+<p>The following are a list of outcome variables:</p>
 <ul>
 <li><p>Number of Injuries: Number of people injured</p></li>
 <li><p>Indicated Damage: Indicates whether or not aircraft was damaged</p>
@@ -197,7 +190,6 @@
 </ul>
 </div>
 </div>
-</div>
 <div id="statistical-methods" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Statistical Methods</h2>
 <div id="linear-regression" class="section level3" number="2.2.1">
@@ -209,17 +201,17 @@
 </ul>
 <p><span class="math display">\[ Y = \beta_0 + \beta_1 X_1 + \cdots + \beta_k X_k \]</span></p>
 <ul>
-<li><p><span class="math inline">\(Y\)</span> is the continuous outcome</p></li>
-<li><p><span class="math inline">\(X_i\)</span> is the <span class="math inline">\(i^{\text{th}}\)</span> predictor; <span class="math inline">\(i = 1, \cdots, k\)</span>, where <span class="math inline">\(k\)</span> is the number of predictors in the model</p></li>
-<li><p><span class="math inline">\(\beta_i\)</span> is the slope for predictor <span class="math inline">\(i\)</span></p></li>
-<li><p><span class="math inline">\(\beta_0\)</span> is the <span class="math inline">\(Y\)</span>-intercept</p></li>
+<li><p><span class="math inline">\(Y\)</span> is the continuous outcome.</p></li>
+<li><p><span class="math inline">\(X_i\)</span> is the <span class="math inline">\(i^{\text{th}}\)</span> predictor; <span class="math inline">\(i = 1, \cdots, k\)</span>, where <span class="math inline">\(k\)</span> is the number of predictors in the model.</p></li>
+<li><p><span class="math inline">\(\beta_i\)</span> is the slope for predictor <span class="math inline">\(i\)</span>.</p></li>
+<li><p><span class="math inline">\(\beta_0\)</span> is the <span class="math inline">\(Y\)</span>-intercept.</p></li>
 </ul>
 <p><em>Assumptions of the Model</em></p>
 <ol style="list-style-type: decimal">
-<li><p>Homoscedasticity: the residual has constant variance for any value of <span class="math inline">\(X\)</span></p></li>
-<li><p>Independence: observations are independent from one another</p></li>
-<li><p>Linearity: there exists a linear relationship between the two variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></p></li>
-<li><p>Normality: the residuals are normally distributed</p></li>
+<li><p>Homoscedasticity: the residual has constant variance for any value of <span class="math inline">\(X\)</span>.</p></li>
+<li><p>Independence: observations are independent from one another.</p></li>
+<li><p>Linearity: there exists a linear relationship between the two variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</p></li>
+<li><p>Normality: the residuals are normally distributed.</p></li>
 </ol>
 <p><em>Interpretation</em></p>
 <ul>
@@ -235,8 +227,8 @@
 </ul></li>
 <li><p>The test statistic is defined by the following equation: <span class="math display">\[ t_0 = \frac{\hat{\beta}_i}{\text{SE}_{\hat{\beta}_i}} \]</span></p>
 <ul>
-<li><p><span class="math inline">\(\hat\beta_i\)</span> is the slope of the sample regression line</p></li>
-<li><p><span class="math inline">\(SE_{\hat\beta_i}\)</span> is the standard error of the slope</p></li>
+<li><p><span class="math inline">\(\hat\beta_i\)</span> is the slope of the sample regression line.</p></li>
+<li><p><span class="math inline">\(SE_{\hat\beta_i}\)</span> is the standard error of the slope.</p></li>
 </ul></li>
 <li><p>We can construct confidence intervals as follows:</p></li>
 </ul>
@@ -254,16 +246,16 @@
 </ul>
 <p><span class="math display">\[ \ln \left( \frac{\pi}{1-\pi} \right) = \beta_0 + \beta_1 X_1 + \cdots + \beta_k X_k \]</span></p>
 <ul>
-<li><p><span class="math inline">\(\pi=P[Y=1]\)</span> = the probability of the outcome</p></li>
-<li><p><span class="math inline">\(X_i\)</span> is the <span class="math inline">\(i^{\text{th}}\)</span> predictor; <span class="math inline">\(i = 1, \cdots, k\)</span>, where <span class="math inline">\(k\)</span> is the number of predictors in the model</p></li>
-<li><p><span class="math inline">\(\beta_i\)</span> is the slope for predictor <span class="math inline">\(i\)</span></p></li>
-<li><p><span class="math inline">\(\beta_0\)</span> is the <span class="math inline">\(Y\)</span>-intercept</p></li>
+<li><p><span class="math inline">\(\pi=P[Y=1]\)</span> = the probability of the outcome.</p></li>
+<li><p><span class="math inline">\(X_i\)</span> is the <span class="math inline">\(i^{\text{th}}\)</span> predictor; <span class="math inline">\(i = 1, \cdots, k\)</span>, where <span class="math inline">\(k\)</span> is the number of predictors in the model.</p></li>
+<li><p><span class="math inline">\(\beta_i\)</span> is the slope for predictor <span class="math inline">\(i\)</span>.</p></li>
+<li><p><span class="math inline">\(\beta_0\)</span> is the <span class="math inline">\(Y\)</span>-intercept.</p></li>
 </ul>
 <p><em>Assumptions of the Model</em></p>
 <ol style="list-style-type: decimal">
-<li><p>Binary outcome: the response variable is binary</p></li>
-<li><p>Independence: observations are independent from one another</p></li>
-<li><p>Linearity: there exists a linear relationship between <span class="math inline">\(X\)</span> and the log-odds</p></li>
+<li><p>Binary outcome: the response variable is binary.</p></li>
+<li><p>Independence: observations are independent from one another.</p></li>
+<li><p>Linearity: there exists a linear relationship between <span class="math inline">\(X\)</span> and the log-odds.</p></li>
 </ol>
 <p><em>Interpretation</em></p>
 <ul>
@@ -280,8 +272,8 @@
 <ul>
 <li><p>The test statistic is defined by the following equation: <span class="math display">\[ z_0 = \frac{ \hat{\beta}_i-{\beta}_i^{(0)}}{\text{SE}_{\hat{\beta}_i}} \]</span></p>
 <ul>
-<li><p><span class="math inline">\(\hat\beta_i\)</span> is the slope of the sample regression line</p></li>
-<li><p><span class="math inline">\(\text{SE}_{\hat\beta_i}\)</span> is the standard error of the slope</p></li>
+<li><p><span class="math inline">\(\hat\beta_i\)</span> is the slope of the sample regression line.</p></li>
+<li><p><span class="math inline">\(\text{SE}_{\hat\beta_i}\)</span> is the standard error of the slope.</p></li>
 </ul></li>
 <li><p>We can construct confidence intervals as follows:</p></li>
 </ul>
@@ -296,18 +288,18 @@
 </ul>
 <p><span class="math display">\[ \text{logit}(P[Y\le j])=\text{ln}\left(\frac{\pi_1 + \cdots + \pi_j}{{\pi_{j+1}} + \cdots + {\pi_c}}\right) = \hat\beta_{0j} + \hat\beta_{1}X_1 + \cdots + \hat\beta_{k}X_k  \]</span></p>
 <ul>
-<li><p><span class="math inline">\(\text{logit}(P[Y\le j])\)</span> is the probability that our outcome is in category <span class="math inline">\(j\)</span> or one below it</p></li>
-<li><p><span class="math inline">\(Y\)</span> is an ordinal outcome</p></li>
-<li><p><span class="math inline">\(X_i\)</span> is the <span class="math inline">\(i^{\text{th}}\)</span> predictor; <span class="math inline">\(i = 1, \dots, k\)</span>, where <span class="math inline">\(k\)</span> is the number of predictors in the model</p></li>
-<li><p><span class="math inline">\(\beta_i\)</span> is the slope for predictor <span class="math inline">\(i\)</span></p></li>
-<li><p><span class="math inline">\(\beta_{0j}\)</span> is the <span class="math inline">\(Y\)</span>-intercept for the model comparing <span class="math inline">\(Y \le j\)</span> to <span class="math inline">\(Y &gt; j\)</span></p></li>
+<li><p><span class="math inline">\(\text{logit}(P[Y\le j])\)</span> is the probability that our outcome is in category <span class="math inline">\(j\)</span> or one below it.</p></li>
+<li><p><span class="math inline">\(Y\)</span> is an ordinal outcome.</p></li>
+<li><p><span class="math inline">\(X_i\)</span> is the <span class="math inline">\(i^{\text{th}}\)</span> predictor; <span class="math inline">\(i = 1, \dots, k\)</span>, where <span class="math inline">\(k\)</span> is the number of predictors in the model.</p></li>
+<li><p><span class="math inline">\(\beta_i\)</span> is the slope for predictor <span class="math inline">\(i\)</span>.</p></li>
+<li><p><span class="math inline">\(\beta_{0j}\)</span> is the <span class="math inline">\(Y\)</span>-intercept for the model comparing <span class="math inline">\(Y \le j\)</span> to <span class="math inline">\(Y &gt; j\)</span>.</p></li>
 </ul>
 <p><em>Assumptions of the Model</em></p>
 <ol style="list-style-type: decimal">
-<li><p>Ordinal response: the response variable is ordinal</p></li>
-<li><p>Independence: observations are independent of one another</p></li>
-<li><p>Linearity: there exists a linear relationship between <span class="math inline">\(X\)</span> and the cumulative logit</p></li>
-<li><p>Proportional odds: for all predictors in the model, the odds ratios will be the same, regardless of any two outcomes selected for comparison</p></li>
+<li><p>Ordinal response: the response variable is ordinal.</p></li>
+<li><p>Independence: observations are independent of one another.</p></li>
+<li><p>Linearity: there exists a linear relationship between <span class="math inline">\(X\)</span> and the cumulative logit.</p></li>
+<li><p>Proportional odds: for all predictors in the model, the odds ratios will be the same, regardless of any two outcomes selected for comparison.</p></li>
 </ol>
 <p><em>Interpretation</em></p>
 <p>Odds ratios are interpreted slightly different than what we saw in binary logistic regression due to the model being cumulative. Odds ratios can be found by exponentiating the coefficients.</p>
@@ -325,8 +317,8 @@
 <ul>
 <li><p>The test statistic is defined by the following equation: <span class="math display">\[ z_0 = \frac{ \hat{\beta}_i-{\beta}_i^{(0)}}{\text{SE}_{\hat{\beta}_i}} \]</span></p>
 <ul>
-<li><p><span class="math inline">\(\hat\beta_i\)</span> is the slope of the sample regression line</p></li>
-<li><p><span class="math inline">\(\text{SE}_{\hat\beta_i}\)</span> is the standard error of the slope</p></li>
+<li><p><span class="math inline">\(\hat\beta_i\)</span> is the slope of the sample regression line.</p></li>
+<li><p><span class="math inline">\(\text{SE}_{\hat\beta_i}\)</span> is the standard error of the slope.</p></li>
 </ul></li>
 <li><p>We can construct confidence intervals as follows:</p></li>
 </ul>

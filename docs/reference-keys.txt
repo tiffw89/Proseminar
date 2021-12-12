@@ -43,3 +43,8 @@ undjusted-associations-1
 adjusted-associations-1
 abstract
 unadjusted-associations-1
+binary-regression-model-results
+unadjusted-associations-indicated-damage
+adjusted-associations-indicated-damage
+ordinal-regression-model-results
+unadjusted-associations-damage-level
