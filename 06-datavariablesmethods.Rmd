@@ -3,7 +3,7 @@
 ## Data
 
 
-|          The wildlife strike data in this project comes directly from the Federal Aviation Administration, where data is contributed in real-time when a strike occurs. Data becomes available when a bird strike is reported to the FAA by an airline or some other aviation industry. The airline or other pilots are required to report this data only when a strike occurs. Thus, there is not data available for every single flight, only those that have experienced a wildlife strike. While there is data available from 1990 to this very day, this project only uses the data through the end of 2020. Additionally, this project concentrates specifically on bird strikes. [2]
+|          The wildlife strike data in this project comes directly from the Federal Aviation Administration, where data is contributed in real-time when a strike occurs. Data becomes available when a bird strike is reported to the FAA by an airline or some other aviation industry. The airline or other pilots are required to report this data only when a strike occurs. Thus, there is not data available for every single flight, only those that have experienced a wildlife strike. While there is data available from 1990 to this very day, this project only uses the data through the end of 2020. Additionally, this project concentrates specifically on bird strikes. [2] 
 
 
 ### Variables 
